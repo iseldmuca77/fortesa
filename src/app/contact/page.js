@@ -40,7 +40,7 @@ const ContactUs = () => {
           
           <h2 className="text-4xl font-bold text-blue-900 mb-4">NA KONTAKTONI</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Jemi këtu për t'ju ndihmuar! Plotësoni formularin më poshtë ose përdorni 
+            Jemi këtu për t&#39;ju ndihmuar! Plotësoni formularin më poshtë ose përdorni 
             detajet tona të kontaktit.
           </p>
         </div>
@@ -136,7 +136,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Adresa:</p>
-                    <p>Rruga "Dëshmorët e Kombit"</p>
+                    <p>Rruga &quot;Dëshmorët e Kombit&quot;</p>
                     <p>Nr. 15 Tiranë, Shqipëri</p>
                   </div>
                 </div>
