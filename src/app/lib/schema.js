@@ -27,7 +27,7 @@ export function businessSchema() {
     telephone: SITE.phoneE164,
     email: SITE.email,
     image: abs("/opengraph-image"),
-    logo: abs("/images/fortesa-mark.svg"),
+    logo: abs("/icon.svg"),
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.street,
