@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "./Icons";
-import { NAV_LINKS, SERVICES, SITE } from "../lib/site";
+import { NAV_LINKS, SERVICES, SITE, serviceHref } from "../lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo variant="dark" size="md" />
           <p className="max-w-xs text-sm leading-relaxed text-muted-dark">
             Kamera sigurie, alarme, instalime elektrike, GPS, porta automatike, rrjete dhe zgjidhje për
-            hoteleri. Montim, monitorim dhe mirëmbajtje nga një ekip i besueshëm.
+            hoteleri. Montim, monitorim dhe mirëmbajtje {SITE.serviceAreaText}.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export default function Footer() {
           <ul className="grid gap-3 text-sm text-cream/80 sm:grid-cols-2">
             {SERVICES.map((service) => (
               <li key={service.slug}>
-                <Link href={`/services#${service.slug}`} className="transition-colors hover:text-gold">
+                <Link href={serviceHref(service.slug)} className="transition-colors hover:text-gold">
                   {service.title}
                 </Link>
               </li>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SectionHeading from "./SectionHeading";
-import { LayersIcon, MonitorIcon, SERVICE_ICONS, WrenchIcon } from "./Icons";
-import { SERVICES } from "../lib/site";
+import { ArrowRightIcon, LayersIcon, MonitorIcon, SERVICE_ICONS, WrenchIcon } from "./Icons";
+import { ROUTES, SERVICES, serviceHref } from "../lib/site";
 
 const EXTRAS = [
   {
@@ -25,14 +25,15 @@ const EXTRAS = [
 ];
 
 /**
- * Full service cards (services page): icon, title, tags and description.
- * Each card carries an anchor id so /services#slug links land on it.
+ * Full service cards (services index): icon, title, tags, description and a
+ * link to the dedicated page. Each card keeps an anchor id for /sherbimet#slug.
  */
 function ServiceCards() {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {SERVICES.map((service) => {
         const Icon = SERVICE_ICONS[service.icon];
+        const href = serviceHref(service.slug);
         return (
           <article
             key={service.slug}
@@ -42,9 +43,21 @@ function ServiceCards() {
             <span className="icon-ring h-16 w-16 group-hover:border-gold-dark group-hover:bg-gold-dark group-hover:text-cream">
               <Icon className="h-7 w-7" />
             </span>
-            <h3 className="mt-6 text-2xl font-bold text-ink">{service.title}</h3>
+            <h3 className="mt-6 text-2xl font-bold text-ink">
+              <Link href={href} className="transition-colors hover:text-gold-dark">
+                {service.title}
+              </Link>
+            </h3>
             <p className="mt-1 text-sm font-semibold text-gold-dark">{service.tags.join(" · ")}</p>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">{service.description}</p>
+            <Link
+              href={href}
+              aria-label={`Lexo më shumë për ${service.title}`}
+              className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-gold-dark transition-colors hover:text-gold-deep"
+            >
+              Lexo më shumë
+              <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </article>
         );
       })}
@@ -54,7 +67,7 @@ function ServiceCards() {
 
 /**
  * Compact service tiles (home page): icon, title and tags only, each linking
- * to its full card on the services page.
+ * to the dedicated service page.
  */
 function ServiceTiles() {
   return (
@@ -64,7 +77,7 @@ function ServiceTiles() {
         return (
           <Link
             key={service.slug}
-            href={`/services#${service.slug}`}
+            href={serviceHref(service.slug)}
             className="group flex items-center gap-4 rounded-xl border border-cream-3 bg-white/70 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-lg hover:shadow-gold/10"
           >
             <span className="icon-ring h-12 w-12 group-hover:border-gold-dark group-hover:bg-gold-dark group-hover:text-cream">
@@ -85,7 +98,7 @@ function ServiceTiles() {
 
 /**
  * Services section. `compact` renders the tile grid used on the home page;
- * otherwise the full cards, extras and closing note used on /services.
+ * otherwise the full cards, extras and closing note used on /sherbimet.
  */
 export default function Services({ showHeading = true, compact = false }) {
   return (
@@ -102,7 +115,7 @@ export default function Services({ showHeading = true, compact = false }) {
 
       {compact ? (
         <div className="mt-10 text-center">
-          <Link href="/services" className="btn btn-deep">
+          <Link href={ROUTES.services} className="btn btn-deep">
             Mëso më shumë për shërbimet
           </Link>
         </div>

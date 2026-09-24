@@ -23,7 +23,7 @@ export default function CtaBand() {
             <PhoneIcon className="h-6 w-6" />
             {SITE.phoneDisplay}
           </a>
-          <Link href="/contact" className="btn btn-dark">
+          <Link href="/kontakt" className="btn btn-dark">
             Na Kontaktoni
           </Link>
         </div>

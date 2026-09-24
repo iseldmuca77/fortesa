@@ -337,3 +337,12 @@ export function StarIcon({ className = "h-4 w-4" }) {
     </svg>
   );
 }
+
+export function PlusIcon(props) {
+  return (
+    <Icon {...props}>
+      <path d="M12 5v14" />
+      <path d="M5 12h14" />
+    </Icon>
+  );
+}

@@ -1,12 +1,14 @@
 import PageHeader from "../components/PageHeader";
 import ContactForm from "../components/ContactForm";
 import { ClockIcon, GlobeIcon, MailIcon, MapPinIcon, PhoneIcon, ShieldCheckIcon } from "../components/Icons";
-import { SITE } from "../lib/site";
+import { ROUTES, SITE } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Kontakt",
   description: `Kontaktoni Fortesa në ${SITE.phoneDisplay} ose ${SITE.email} për kamera sigurie, alarme, instalime elektrike, GPS, porta automatike dhe çdo shërbim tjetër.`,
-};
+  path: ROUTES.contact,
+});
 
 function Detail({ icon: Icon, label, children }) {
   return (

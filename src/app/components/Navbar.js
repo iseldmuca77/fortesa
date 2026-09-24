@@ -49,7 +49,7 @@ export default function Navbar() {
             <PhoneIcon className="h-4 w-4 text-gold" />
             {SITE.phoneDisplay}
           </a>
-          <Link href="/contact" className="btn btn-gold btn-sm">
+          <Link href="/kontakt" className="btn btn-gold btn-sm">
             Na Kontaktoni
           </Link>
         </div>
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <PhoneIcon className="h-4 w-4 text-gold" />
                 {SITE.phoneDisplay}
               </a>
-              <Link href="/contact" onClick={() => setOpen(false)} className="btn btn-gold">
+              <Link href="/kontakt" onClick={() => setOpen(false)} className="btn btn-gold">
                 Na Kontaktoni
               </Link>
             </div>

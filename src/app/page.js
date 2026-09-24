@@ -4,9 +4,14 @@ import Logo from "./components/Logo";
 import Services from "./components/Services";
 import WhyFortesa from "./components/WhyFortesa";
 import Testimonials from "./components/Testimonials";
+import FaqSection from "./components/FaqSection";
 import CtaBand from "./components/CtaBand";
 import { ArrowRightIcon, GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
-import { FEATURED_SERVICES, SERVICES, SITE } from "./lib/site";
+import { FEATURED_SERVICES, ROUTES, SERVICES, SITE } from "./lib/site";
+import { HOME_FAQS } from "./lib/faqs";
+import { pageMetadata } from "./lib/seo";
+
+export const metadata = pageMetadata({ path: ROUTES.home });
 
 export default function Home() {
   const moreServices = SERVICES.length - FEATURED_SERVICES.length;
@@ -34,13 +39,14 @@ export default function Home() {
             </h1>
             <p className="animate-fade-up fade-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
               Kamera sigurie, sisteme alarmi, instalime elektrike, GPS, porta automatike, rrjete dhe
-              zgjidhje për hoteleri. Montim, monitorim dhe mirëmbajtje me teknologji moderne.
+              zgjidhje për hoteleri {SITE.serviceAreaText}. Montim, monitorim dhe mirëmbajtje me
+              teknologji moderne.
             </p>
             <div className="animate-fade-up fade-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact" className="btn btn-gold">
+              <Link href={ROUTES.contact} className="btn btn-gold">
                 Na Kontaktoni
               </Link>
-              <Link href="/services" className="btn btn-outline">
+              <Link href={ROUTES.services} className="btn btn-outline">
                 Shërbimet Tona
               </Link>
             </div>
@@ -88,7 +94,7 @@ export default function Home() {
               </ul>
               {moreServices > 0 && (
                 <Link
-                  href="/services"
+                  href={ROUTES.services}
                   className="group flex items-center justify-between border-t border-cream-3 px-6 py-4 text-sm font-bold text-gold-dark transition-colors hover:text-gold-deep"
                 >
                   <span>Edhe {moreServices} shërbime të tjera</span>
@@ -113,6 +119,11 @@ export default function Home() {
       <Services compact />
       <WhyFortesa />
       <Testimonials />
+      <FaqSection
+        title="Pyetje të shpeshta për Fortesa"
+        lead="Përgjigjet e pyetjeve që na bëjnë më shpesh klientët para se të fillojmë një projekt."
+        items={HOME_FAQS}
+      />
       <CtaBand />
     </>
   );

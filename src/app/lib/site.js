@@ -2,36 +2,63 @@
  * Single source of truth for Fortesa contact details, navigation and services.
  * Edit here and every page picks up the change.
  */
+
+/** Canonical origin. fortesa.al redirects here, so every absolute URL uses www. */
+const BASE_URL = "https://www.fortesa.al";
+
 export const SITE = {
   name: "Fortesa",
   tagline: "Siguri dhe Teknologji",
+  url: BASE_URL,
+  description:
+    "Fortesa (fortesa.al) është kompani me qendër në Tiranë, e specializuar në kamera sigurie (CCTV), sisteme alarmi, instalime elektrike, GPS për makina, sisteme parkingu me tra automatik, porta automatike, detektim zjarri, brava elektronike për hotele, rrjete dhe Wi-Fi, telefoni për hotele dhe sisteme audio, me montim, monitorim 24/7 dhe mirëmbajtje në gjithë Shqipërinë.",
   phoneDisplay: "+355 68 20 100 15",
   phoneHref: "tel:+355682010015",
+  phoneE164: "+355682010015",
   email: "fortesaalbania@gmail.com",
   website: "www.fortesa.al",
-  websiteHref: "https://www.fortesa.al",
+  websiteHref: BASE_URL,
   address: ["Rruga Pandeli Cale", "Tiranë, Shqipëri"],
+  street: "Rruga Pandeli Cale",
+  city: "Tiranë",
+  country: "Shqipëri",
+  countryCode: "AL",
   mapQuery: "Rruga Pandeli Cale, Tirana, Albania",
   hours: ["Të hapur 24 orë, 7 ditë në javë", "Na telefononi në çdo kohë"],
   clients: "250+",
   years: "8+",
+  /** Where Fortesa installs, as a phrase used in page copy. */
+  serviceAreaText: "në Tiranë dhe në gjithë Shqipërinë",
+  /** Public profiles (Facebook, Instagram, LinkedIn...). Full URLs added here are published as sameAs links. */
+  socials: [],
 };
 
+export const ROUTES = {
+  home: "/",
+  services: "/sherbimet",
+  about: "/rreth-nesh",
+  contact: "/kontakt",
+};
+
+/** URL of the dedicated page for one service. */
+export const serviceHref = (slug) => `${ROUTES.services}/${slug}`;
+
 export const NAV_LINKS = [
-  { href: "/", label: "Kreu" },
-  { href: "/services", label: "Shërbimet" },
-  { href: "/about", label: "Rreth Nesh" },
-  { href: "/contact", label: "Kontakt" },
+  { href: ROUTES.home, label: "Kreu" },
+  { href: ROUTES.services, label: "Shërbimet" },
+  { href: ROUTES.about, label: "Rreth Nesh" },
+  { href: ROUTES.contact, label: "Kontakt" },
 ];
 
 /**
  * Every service Fortesa offers, in the order they appear on the site.
+ * `slug` is the URL under /sherbimet and must have an entry in lib/service-details.js.
  * `icon` must be a key of SERVICE_ICONS in components/Icons.js.
  * `featured` marks the three core services shown in the home-page hero card.
  */
 export const SERVICES = [
   {
-    slug: "kamera",
+    slug: "kamera-sigurie",
     icon: "camera",
     title: "Kamera Sigurie",
     tags: ["Montim", "Monitorim", "Mirëmbajtje"],
@@ -40,7 +67,7 @@ export const SERVICES = [
     featured: true,
   },
   {
-    slug: "alarme",
+    slug: "sisteme-alarmi",
     icon: "alarm",
     title: "Sisteme Alarmi",
     tags: ["Kundër vjedhjes", "Kundër zjarrit"],
@@ -49,7 +76,7 @@ export const SERVICES = [
     featured: true,
   },
   {
-    slug: "elektrike",
+    slug: "instalime-elektrike",
     icon: "plug",
     title: "Instalime Elektrike",
     tags: ["Të plota", "Riparime", "Mirëmbajtje"],
@@ -58,7 +85,7 @@ export const SERVICES = [
     featured: true,
   },
   {
-    slug: "gps",
+    slug: "gps-per-makina",
     icon: "gps",
     title: "GPS për Makina",
     tags: ["Gjurmim", "Kontroll", "Monitorim në Kohë Reale"],
@@ -66,7 +93,7 @@ export const SERVICES = [
       "Pajisje GPS për lokalizim të saktë të automjeteve ose flotave tuaja. Përfshin monitorim të lëvizjes nga telefoni, histori të rrugëtimeve dhe njoftime rreth sigurisë së mjetit.",
   },
   {
-    slug: "parking",
+    slug: "sisteme-parkingu",
     icon: "parking",
     title: "Sisteme Parkingu & Trau",
     tags: ["Vendosje Trau", "Biletari", "Kontroll Hyrje-Dalje"],
@@ -90,7 +117,7 @@ export const SERVICES = [
       "Sisteme profesionale për zbulimin e hershëm të tymit dhe zjarrit në objekte industriale, biznese apo komplekse banimi. Njoftim i menjëhershëm për parandalimin e çdo rreziku.",
   },
   {
-    slug: "brava-elektrike",
+    slug: "brava-elektrike-hoteleri",
     icon: "lock",
     title: "Brava Elektrike për Hoteleri",
     tags: ["Kartela Inteligjente", "Kontroll Aksesi", "Menaxhim me Software"],
@@ -106,7 +133,7 @@ export const SERVICES = [
       "Dizajnim dhe shtrirje e rrjeteve kompjuterike me kabllo dhe Wi-Fi të shpejtë për shtëpi, zyra dhe hoteleri. Mbulim i plotë pa shkëputje dhe performancë e lartë transmetimi.",
   },
   {
-    slug: "telefoni",
+    slug: "telefoni-hoteleri",
     icon: "headset",
     title: "Sisteme Telefonie për Hoteleri",
     tags: ["Qendra Telefonike (PBX/VoIP)", "Komunikim i Brendshëm", "Integrim me Software"],
@@ -114,7 +141,7 @@ export const SERVICES = [
       "Zgjidhje telefonie profesionale (IP/VoIP) për hotele dhe biznese. Mundësojnë komunikim të qartë ndërmjet dhomave, recepsionit dhe stafit, si dhe integrim të plotë me sistemet e menaxhimit të hotelit.",
   },
   {
-    slug: "audio",
+    slug: "sisteme-audio",
     icon: "speaker",
     title: "Sisteme Audio & Tingullit",
     tags: ["Sisteme Zëri (PA)", "Audio për Ambiente & Hoteleri", "Muzikë Sfondi"],

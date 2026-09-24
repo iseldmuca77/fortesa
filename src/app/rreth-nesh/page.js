@@ -4,13 +4,23 @@ import PageHeader from "../components/PageHeader";
 import SectionHeading from "../components/SectionHeading";
 import AnimatedNumber from "../components/AnimatedNumber";
 import CtaBand from "../components/CtaBand";
+import JsonLd from "../components/JsonLd";
 import { BadgeCheckIcon, HandshakeIcon, HeartIcon, LightbulbIcon } from "../components/Icons";
+import { ROUTES, SITE } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
+import { breadcrumbSchema, graph } from "../lib/schema";
 
-export const metadata = {
+const CRUMBS = [
+  { name: "Kreu", href: ROUTES.home },
+  { name: "Rreth Nesh", href: ROUTES.about },
+];
+
+export const metadata = pageMetadata({
   title: "Rreth Nesh",
   description:
-    "Fortesa është një kompani shqiptare e specializuar në sisteme sigurie, instalime elektrike, automatizim dhe zgjidhje teknologjike për shtëpi, biznese dhe hoteleri, me mbi 250 klientë të kënaqur.",
-};
+    "Fortesa (fortesa.al), Tiranë: kompani shqiptare për sisteme sigurie, instalime elektrike, automatizim dhe teknologji për shtëpi, biznese dhe hotele. Mbi 250 klientë.",
+  path: ROUTES.about,
+});
 
 const VALUES = [
   {
@@ -38,10 +48,12 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={graph(breadcrumbSchema(CRUMBS))} />
       <PageHeader
         eyebrow="Rreth Nesh"
         title="Mirë se vini në Fortesa"
-        lead="Siguri dhe teknologji për shtëpi dhe biznese, me një ekip që kujdeset për mbrojtjen tuaj."
+        lead="Siguri dhe teknologji për shtëpi, biznese dhe hotele, me një ekip që kujdeset për mbrojtjen tuaj."
+        breadcrumbs={CRUMBS}
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
@@ -53,11 +65,11 @@ export default function AboutPage() {
                 Fortesa, Siguri dhe Teknologji
               </h2>
               <p className="mt-5 leading-relaxed text-muted">
-                Fortesa është një kompani shqiptare e specializuar në sisteme sigurie dhe instalime
-                teknologjike. Ofrojmë kamera sigurie, sisteme alarmi dhe detektimi zjarri, instalime
-                elektrike, GPS për makina, sisteme parkingu, porta automatike dhe rrjete Wi-Fi, si dhe
-                brava elektrike, telefoni dhe sisteme audio për hoteleri, me montim, monitorim dhe
-                mirëmbajtje nga ekipi ynë.
+                Fortesa (fortesa.al) është një kompani shqiptare me qendër në {SITE.city}, e specializuar
+                në sisteme sigurie dhe instalime teknologjike. Ofrojmë kamera sigurie, sisteme alarmi dhe
+                detektimi zjarri, instalime elektrike, GPS për makina, sisteme parkingu, porta automatike
+                dhe rrjete Wi-Fi, si dhe brava elektronike, telefoni dhe sisteme audio për hoteleri, me
+                montim, monitorim dhe mirëmbajtje {SITE.serviceAreaText}.
               </p>
             </div>
 
@@ -77,7 +89,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <Link href="/contact" className="btn btn-deep">
+            <Link href={ROUTES.contact} className="btn btn-deep">
               Na Kontaktoni
             </Link>
           </div>
