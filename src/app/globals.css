@@ -1,29 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Fortesa brand tokens (black / cream / gold, from the card + logo artwork)
+   --------------------------------------------------------------------------- */
+@theme {
+  --color-ink: #141414;        /* brand black */
+  --color-ink-2: #1c1c1c;      /* raised surface on black */
+  --color-ink-3: #2a2a2a;      /* borders on black */
+  --color-cream: #f7f4ec;      /* brand off-white */
+  --color-cream-2: #efe9dc;    /* raised surface on cream */
+  --color-cream-3: #e3dbc9;    /* borders on cream */
+  --color-gold: #c9a54a;       /* bright gold: bars + accents on black */
+  --color-gold-light: #e2c574; /* gradient highlight */
+  --color-gold-dark: #8a6a1e;  /* deep gold: text + icons on cream */
+  --color-gold-deep: #7a5a12;  /* deep gold bar on cream */
+  --color-muted: #6e675b;      /* secondary text on cream */
+  --color-muted-dark: #b3ab9b; /* secondary text on black */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: 'Barlow Condensed', sans-serif;
-  --font-mono: 'Barlow Condensed', monospace;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-roboto-slab), "Rockwell", Georgia, serif;
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base ------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
 }
-*/
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Barlow Condensed', sans-serif;
+  background: #f7f4ec;
+  color: #141414;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #c9a54a;
+  color: #141414;
+}
+
+/* Gold gradient helpers (same gradient as the logo artwork) ---------------- */
+@utility text-gold-gradient {
+  background-image: linear-gradient(135deg, #e6cd82 0%, #c9a54a 45%, #9a7a2a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gold-gradient-dark {
+  background-image: linear-gradient(135deg, #c9a54a 0%, #9a7a2a 50%, #7a5a12 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gold-gradient {
+  background-image: linear-gradient(135deg, #e2c574 0%, #c9a54a 50%, #8a6a1e 100%);
+}
+
+/* Components ------------------------------------------------------------- */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-sm {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn:focus-visible {
+    outline: 2px solid #c9a54a;
+    outline-offset: 2px;
+  }
+  .btn-gold {
+    background: #c9a54a;
+    color: #141414;
+  }
+  .btn-gold:hover {
+    background: #e2c574;
+  }
+  .btn-outline {
+    border: 1px solid rgba(201, 165, 74, 0.6);
+    color: #f7f4ec;
+  }
+  .btn-outline:hover {
+    border-color: #c9a54a;
+    color: #c9a54a;
+  }
+  .btn-dark {
+    background: #141414;
+    color: #f7f4ec;
+  }
+  .btn-dark:hover {
+    background: #2a2a2a;
+  }
+  .btn-deep {
+    background: #7a5a12;
+    color: #f7f4ec;
+  }
+  .btn-deep:hover {
+    background: #8a6a1e;
+  }
+
+  /* Small uppercase label with a short rule in front, like the card layout */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c9a54a;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.7;
+  }
+  .eyebrow-deep {
+    color: #8a6a1e;
+  }
+
+  /* Outlined gold circle used for service icons (as on the business card) */
+  .icon-ring {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    border: 1px solid rgba(138, 106, 30, 0.45);
+    color: #8a6a1e;
+    background: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .icon-ring-dark {
+    border-color: rgba(201, 165, 74, 0.45);
+    color: #c9a54a;
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* Motion ----------------------------------------------------------------- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-delay-1 { animation-delay: 0.1s; }
+.fade-delay-2 { animation-delay: 0.2s; }
+.fade-delay-3 { animation-delay: 0.3s; }
+.fade-delay-4 { animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+}
+
+/* Swiper (testimonials) in brand colors ---------------------------------- */
+.testimonials-swiper {
+  padding-bottom: 3rem;
+}
+.testimonials-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+.swiper-pagination-bullet {
+  background: #8a6a1e;
+  opacity: 0.35;
+}
+.swiper-pagination-bullet-active {
+  background: #c9a54a;
+  opacity: 1;
 }

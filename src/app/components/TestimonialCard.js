@@ -1,28 +1,19 @@
-import React from "react";
-import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
+import { StarIcon } from "./Icons";
 
-const TestimonialCard = ({ text, rating }) => {
+export default function TestimonialCard({ text, author, rating = 5 }) {
   return (
-    <div className="relative flex flex-col justify-between text-center rounded-sm p-6 bg-[#3b82f6] text-white w-full">
-      {/* Quote Icon */}
-      <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#3b82f6] p-3 rounded-full text-xl">
-        <FaQuoteLeft />
-      </div>
-
-      {/* Text */}
-      <p className="mt-6 text-sm leading-relaxed">{text}</p>
-
-      {/* Stars */}
-      <div className="mt-4 flex justify-center space-x-1">
-        {[...Array(rating)].map((_, i) => (
-          <FaStar key={i} className="text-white" />
-        ))}
-      </div>
-
-      {/* Speech bubble tail */}
-      <div className="absolute -bottom-3 left-6 w-0 h-0 border-l-[12px] border-l-transparent border-t-[12px] border-t-[#3b82f6] border-r-[12px] border-r-transparent"></div>
-    </div>
+    <figure className="flex h-full w-full flex-col rounded-2xl border border-cream-3 bg-white/80 p-8 shadow-sm">
+      <FaQuoteLeft className="text-2xl text-gold" aria-hidden="true" />
+      <blockquote className="mt-5 flex-1 text-base leading-relaxed text-ink/85">{text}</blockquote>
+      <figcaption className="mt-6 flex items-center justify-between border-t border-cream-3 pt-5">
+        <span className="text-sm font-bold text-ink">{author}</span>
+        <span className="flex gap-0.5 text-gold" role="img" aria-label={`${rating} nga 5 yje`}>
+          {Array.from({ length: rating }).map((_, i) => (
+            <StarIcon key={i} className="h-4 w-4" />
+          ))}
+        </span>
+      </figcaption>
+    </figure>
   );
-};
-
-export default TestimonialCard;
+}

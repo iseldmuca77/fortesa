@@ -1,89 +1,83 @@
 import Link from "next/link";
+import Logo from "./Logo";
+import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "./Icons";
+import { NAV_LINKS, SERVICES, SITE } from "../lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-blue-500 text-white mt-16 ">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-gold/25 bg-ink text-cream">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <div className="space-y-5">
+          <Logo variant="dark" size="md" />
+          <p className="max-w-xs text-sm leading-relaxed text-muted-dark">
+            Kamera sigurie, sisteme alarmi dhe instalime elektrike për shtëpi dhe biznese. Montim,
+            monitorim dhe mirëmbajtje nga një ekip i besueshëm.
+          </p>
+        </div>
+
         <div>
-          <h4 className="text-lg font-semibold mb-3">Contact</h4>
-          <ul className="space-y-2 text-gray-300">
-            <li>Email: info@fortesa.com</li>
-            <li>Phone: +1 (555) 123-4567</li>
-            <li>Address: 123 Security Ave, Safety City</li>
+          <h4 className="eyebrow mb-5">Shërbimet</h4>
+          <ul className="space-y-3 text-sm text-cream/80">
+            {SERVICES.map((service) => (
+              <li key={service.slug}>
+                <Link href={`/services#${service.slug}`} className="transition-colors hover:text-gold">
+                  {service.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+
         <div>
-          <h4 className="text-lg font-semibold mb-3">Services</h4>
-          <ul className="space-y-2 text-gray-300">
-            <li>
-              <Link href="/" className="hover:text-white">Protection & Physical Security</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">Security & Escorting Values</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">CCTV Systems</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">Alarm Systems</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">GPS Systems</Link>
-            </li>
+          <h4 className="eyebrow mb-5">Lidhje</h4>
+          <ul className="space-y-3 text-sm text-cream/80">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="transition-colors hover:text-gold">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+
         <div>
-          <h4 className="text-lg font-semibold mb-3">Sectors</h4>
-          <ul className="space-y-2 text-gray-300">
+          <h4 className="eyebrow mb-5">Kontakt</h4>
+          <ul className="space-y-3 text-sm text-cream/80">
             <li>
-              <Link href="/" className="hover:text-white">Business Center and Supermarket</Link>
+              <a href={SITE.phoneHref} className="inline-flex items-center gap-3 transition-colors hover:text-gold">
+                <PhoneIcon className="h-4 w-4 text-gold" />
+                {SITE.phoneDisplay}
+              </a>
             </li>
             <li>
-              <Link href="/" className="hover:text-white">Travel and Tourism</Link>
+              <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-3 transition-colors hover:text-gold">
+                <MailIcon className="h-4 w-4 text-gold" />
+                {SITE.email}
+              </a>
             </li>
             <li>
-              <Link href="/" className="hover:text-white">Hospitals and Health Care</Link>
+              <a href={SITE.websiteHref} className="inline-flex items-center gap-3 transition-colors hover:text-gold">
+                <GlobeIcon className="h-4 w-4 text-gold" />
+                {SITE.website}
+              </a>
             </li>
-            <li>
-              <Link href="/" className="hover:text-white">Embassies and Money Institution</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">Cultural Activities and National Fairs</Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-white">Hydropower plants and Factories</Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
-          <ul className="space-y-2 text-gray-300">
-            <li>
-              <Link href="/" className="hover:text-white">Home</Link>
-            </li>
-            <li>
-              <Link href="/services" className="hover:text-white">Services</Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-white">About</Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-white">Contact</Link>
+            <li className="flex items-start gap-3">
+              <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+              <span>{SITE.address.join(", ")}</span>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex flex-row border-t border-white/10 bg-[#05224C]">
-        <div className="max-w-7xl mx-auto px-6 py-4 justify-between text-gray-400 text-sm">
-          ©Copyright @ {year} Fortesa. All Rights Reserved.
-        </div>
-        <div className="max-w-7xl mx-auto px-6 py-4 justify-between text-gray-400 text-sm">
-          <Link href="/">Complains Policy & Procedures</Link>
+
+      <div className="bg-gold text-ink">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <span>© {year} Fortesa. Të gjitha të drejtat e rezervuara.</span>
+          <span className="uppercase tracking-[0.3em]">Siguri dhe Teknologji</span>
         </div>
       </div>
     </footer>
   );
 }
-
-

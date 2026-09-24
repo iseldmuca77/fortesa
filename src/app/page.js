@@ -1,75 +1,108 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import ServicesSection from "./components/ServicesSection";
+import Logo from "./components/Logo";
 import Services from "./components/Services";
-import SectorsWeCover from "./components/SectorsWeCover";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Grid } from 'swiper/modules';
-import TestimonialCard from "./components/TestimonialCard";
-import 'swiper/css/pagination';
-import 'swiper/css';
-import 'swiper/css/grid';
+import WhyFortesa from "./components/WhyFortesa";
+import Testimonials from "./components/Testimonials";
+import CtaBand from "./components/CtaBand";
+import { GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
+import { SERVICES, SITE } from "./lib/site";
 
 export default function Home() {
-
   return (
-    <main>
-      <div
-        className="bg-blue-400 w-full bg-cover bg-center bg-no-repeat min-h-[24rem] sm:min-h-[28rem] md:min-h-[32rem] lg:min-h-[40rem]"
-        style={{ backgroundImage: "url('/images/home-wallpaper-3.jpg')" }}
-      >
-        <div className="flex flex-col w-full px-4 py-12 sm:px-8 md:px-16 lg:px-24 xl:px-48">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-8 text-white my-4 text-center md:text-left">Siguria juaj, prioriteti ynë</h1>
-          <p className="text-white my-4 text-base sm:text-lg md:text-xl text-center md:text-left">Mbrojtje e sigurt, teknologji moderne</p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4 items-center md:items-start justify-center md:justify-start">
-            <Link href="/contact">
-              <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#3b82f6] text-white rounded font-semibold relative overflow-hidden group text-base sm:text-lg">
-                <span className="relative z-10">Na kontakto</span>
-                <div className="absolute inset-0 bg-[#363aad] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1200 origin-left"></div>
-                <div className="absolute inset-0 bg-[#363aad] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1200 origin-right"></div>
-              </button>
-            </Link>
-            <Link href="/about">
-              <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#3b82f6] text-white rounded font-semibold relative overflow-hidden group text-base sm:text-lg">
-                <span className="relative z-10">Rreth Nesh</span>
-                <div className="absolute inset-0 bg-[#363aad] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1200 origin-left"></div>
-                <div className="absolute inset-0 bg-[#363aad] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1200 origin-right"></div>
-              </button>
-            </Link>
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-ink text-cream">
+        <Image
+          src="/images/home-wallpaper-3.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/90 to-ink/50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-linear-to-t from-ink via-transparent to-transparent" aria-hidden="true" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-8 lg:py-28">
+          <div className="lg:col-span-7">
+            <p className="eyebrow animate-fade-up">Siguri dhe Teknologji</p>
+            <h1 className="animate-fade-up fade-delay-1 mt-5 font-display text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
+              Siguria juaj, <span className="text-gold-gradient">prioriteti ynë</span>
+            </h1>
+            <p className="animate-fade-up fade-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
+              Kamera sigurie, sisteme alarmi dhe instalime elektrike për shtëpi dhe biznese. Montim,
+              monitorim dhe mirëmbajtje me teknologji moderne.
+            </p>
+            <div className="animate-fade-up fade-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
+              <Link href="/contact" className="btn btn-gold">
+                Na Kontaktoni
+              </Link>
+              <Link href="/services" className="btn btn-outline">
+                Shërbimet Tona
+              </Link>
+            </div>
+            <div className="animate-fade-up fade-delay-4 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
+              <span className="inline-flex items-center gap-2 font-semibold text-cream/80">
+                <span className="flex gap-0.5 text-gold" aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <StarIcon key={i} className="h-4 w-4" />
+                  ))}
+                </span>
+                Mbi 250 klientë të kënaqur
+              </span>
+              <a
+                href={SITE.phoneHref}
+                className="inline-flex items-center gap-2 font-semibold text-cream/80 transition-colors hover:text-gold"
+              >
+                <PhoneIcon className="h-4 w-4 text-gold" />
+                {SITE.phoneDisplay}
+              </a>
+            </div>
           </div>
-          {/*<ServicesSection /> */}
-        </div>
-      </div>
-      <Services />
-      <SectorsWeCover />
-      <section className="bg-black bg-cover bg-center bg-no-repeat mt-12"
-        style={{ backgroundImage: "url('/images/home-wallpaper-1.jpg')" }}>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center pt-8 sm:pt-12">Çfarë thonë klientët për ne</h1>
-        <p className="text-white text-center px-4 sm:px-12 md:px-24 lg:px-122 mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quam neque quibusdam corrupti aspernatur corporis alias nisi dolorum expedita veritatis voluptates minima.</p>
-        <div className="px-2 sm:px-8 md:px-24 lg:mx-48 pb-8 sm:pb-12 mb-12 sm:mb-24">
-          <Swiper
-            slidesPerView={1}
-            breakpoints={{
-              1024: { slidesPerView: 3 }
-            }}
-            spaceBetween={20}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            {[...Array(6)].map((_, i) => (
-              <SwiperSlide key={i} className="!h-auto flex">
-                <div className="h-full my-6 sm:my-12 pt-6 sm:pt-12">
-                  <TestimonialCard
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore."
-                    rating={5}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+          {/* Business-card style panel */}
+          <div className="animate-fade-up fade-delay-2 lg:col-span-5">
+            <div className="overflow-hidden rounded-2xl border border-gold/30 bg-cream text-ink shadow-2xl shadow-black/50">
+              <div className="flex items-center gap-5 border-b border-cream-3 px-6 py-5">
+                <Logo variant="light" size="sm" />
+                <span className="h-px flex-1 bg-gold-dark/30" aria-hidden="true" />
+              </div>
+              <ul className="divide-y divide-cream-3 px-6">
+                {SERVICES.map((service) => {
+                  const Icon = SERVICE_ICONS[service.icon];
+                  return (
+                    <li key={service.slug} className="flex items-center gap-4 py-5">
+                      <span className="icon-ring h-14 w-14">
+                        <Icon className="h-6 w-6" />
+                      </span>
+                      <div>
+                        <p className="text-lg font-bold">{service.title}</p>
+                        <p className="text-sm text-muted">{service.tags.join(" · ")}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+              <div className="flex flex-wrap items-center justify-between gap-3 bg-gold-deep px-6 py-4 text-sm font-bold text-cream">
+                <span className="inline-flex items-center gap-2">
+                  <GlobeIcon className="h-4 w-4" />
+                  {SITE.website}
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <PhoneIcon className="h-4 w-4" />
+                  {SITE.phoneDisplay}
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </main>
+
+      <Services />
+      <WhyFortesa />
+      <Testimonials />
+      <CtaBand />
+    </>
   );
 }

@@ -1,35 +1,18 @@
-/** @type {import('tailwindcss').Config} */
+/**
+ * Tailwind v4 reads its theme from `@theme` in src/app/globals.css.
+ * This file only mirrors the Fortesa palette for reference / editor tooling.
+ */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/index.html"
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: {
-          500: '#1e3a8a', // blue-900
-          400: '#3b82f6', // blue-500
-          900: '#1e293b', // blue-950
-        },
-        secondary: {
-          400: '#f59e42', // orange-400
-          300: '#fbbf24', // yellow-400
-          700: '#b45309', // orange-700
-        },
-        accent: {
-          500: '#10b981', // emerald-500
-          300: '#6ee7b7', // emerald-300
-          900: '#065f46', // emerald-900
-        },
-        neutral: {
-          500: '#64748b', // slate-500
-          300: '#cbd5e1', // slate-300
-          800: '#334155', // slate-800
-        },
+        ink: { DEFAULT: "#141414", 2: "#1c1c1c", 3: "#2a2a2a" },
+        cream: { DEFAULT: "#f7f4ec", 2: "#efe9dc", 3: "#e3dbc9" },
+        gold: { DEFAULT: "#c9a54a", light: "#e2c574", dark: "#8a6a1e", deep: "#7a5a12" },
+        muted: { DEFAULT: "#6e675b", dark: "#b3ab9b" },
       },
     },
   },
   plugins: [],
-  darkMode: false,
 };
