@@ -9,7 +9,7 @@ import { BadgeCheckIcon, HandshakeIcon, HeartIcon, LightbulbIcon } from "../comp
 export const metadata = {
   title: "Rreth Nesh",
   description:
-    "Fortesa është një kompani shqiptare e specializuar në kamera sigurie, sisteme alarmi dhe instalime elektrike, me mbi 250 klientë të kënaqur.",
+    "Fortesa është një kompani shqiptare e specializuar në sisteme sigurie, instalime elektrike, automatizim dhe zgjidhje teknologjike për shtëpi, biznese dhe hoteleri, me mbi 250 klientë të kënaqur.",
 };
 
 const VALUES = [
@@ -54,8 +54,10 @@ export default function AboutPage() {
               </h2>
               <p className="mt-5 leading-relaxed text-muted">
                 Fortesa është një kompani shqiptare e specializuar në sisteme sigurie dhe instalime
-                teknologjike. Ofrojmë kamera sigurie, sisteme alarmi kundër vjedhjes dhe zjarrit, si dhe
-                instalime elektrike të plota, me montim, monitorim dhe mirëmbajtje nga ekipi ynë.
+                teknologjike. Ofrojmë kamera sigurie, sisteme alarmi dhe detektimi zjarri, instalime
+                elektrike, GPS për makina, sisteme parkingu, porta automatike dhe rrjete Wi-Fi, si dhe
+                brava elektrike, telefoni dhe sisteme audio për hoteleri, me montim, monitorim dhe
+                mirëmbajtje nga ekipi ynë.
               </p>
             </div>
 

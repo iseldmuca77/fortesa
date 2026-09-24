@@ -8,18 +8,18 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gold/25 bg-ink text-cream">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-5 lg:px-8">
         <div className="space-y-5">
           <Logo variant="dark" size="md" />
           <p className="max-w-xs text-sm leading-relaxed text-muted-dark">
-            Kamera sigurie, sisteme alarmi dhe instalime elektrike për shtëpi dhe biznese. Montim,
-            monitorim dhe mirëmbajtje nga një ekip i besueshëm.
+            Kamera sigurie, alarme, instalime elektrike, GPS, porta automatike, rrjete dhe zgjidhje për
+            hoteleri. Montim, monitorim dhe mirëmbajtje nga një ekip i besueshëm.
           </p>
         </div>
 
-        <div>
+        <div className="lg:col-span-2">
           <h4 className="eyebrow mb-5">Shërbimet</h4>
-          <ul className="space-y-3 text-sm text-cream/80">
+          <ul className="grid gap-3 text-sm text-cream/80 sm:grid-cols-2">
             {SERVICES.map((service) => (
               <li key={service.slug}>
                 <Link href={`/services#${service.slug}`} className="transition-colors hover:text-gold">

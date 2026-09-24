@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata = {
   title: "Kontakt",
-  description: `Kontaktoni Fortesa në ${SITE.phoneDisplay} ose ${SITE.email} për kamera sigurie, sisteme alarmi dhe instalime elektrike.`,
+  description: `Kontaktoni Fortesa në ${SITE.phoneDisplay} ose ${SITE.email} për kamera sigurie, alarme, instalime elektrike, GPS, porta automatike dhe çdo shërbim tjetër.`,
 };
 
 function Detail({ icon: Icon, label, children }) {

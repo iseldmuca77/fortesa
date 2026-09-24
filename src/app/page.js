@@ -5,10 +5,12 @@ import Services from "./components/Services";
 import WhyFortesa from "./components/WhyFortesa";
 import Testimonials from "./components/Testimonials";
 import CtaBand from "./components/CtaBand";
-import { GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
-import { SERVICES, SITE } from "./lib/site";
+import { ArrowRightIcon, GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
+import { FEATURED_SERVICES, SERVICES, SITE } from "./lib/site";
 
 export default function Home() {
+  const moreServices = SERVICES.length - FEATURED_SERVICES.length;
+
   return (
     <>
       {/* Hero */}
@@ -31,8 +33,8 @@ export default function Home() {
               Siguria juaj, <span className="text-gold-gradient">prioriteti ynë</span>
             </h1>
             <p className="animate-fade-up fade-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
-              Kamera sigurie, sisteme alarmi dhe instalime elektrike për shtëpi dhe biznese. Montim,
-              monitorim dhe mirëmbajtje me teknologji moderne.
+              Kamera sigurie, sisteme alarmi, instalime elektrike, GPS, porta automatike, rrjete dhe
+              zgjidhje për hoteleri. Montim, monitorim dhe mirëmbajtje me teknologji moderne.
             </p>
             <div className="animate-fade-up fade-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
               <Link href="/contact" className="btn btn-gold">
@@ -61,7 +63,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Business-card style panel */}
+          {/* Business-card style panel: the three core services, plus a link to the rest */}
           <div className="animate-fade-up fade-delay-2 lg:col-span-5">
             <div className="overflow-hidden rounded-2xl border border-gold/30 bg-cream text-ink shadow-2xl shadow-black/50">
               <div className="flex items-center gap-5 border-b border-cream-3 px-6 py-5">
@@ -69,7 +71,7 @@ export default function Home() {
                 <span className="h-px flex-1 bg-gold-dark/30" aria-hidden="true" />
               </div>
               <ul className="divide-y divide-cream-3 px-6">
-                {SERVICES.map((service) => {
+                {FEATURED_SERVICES.map((service) => {
                   const Icon = SERVICE_ICONS[service.icon];
                   return (
                     <li key={service.slug} className="flex items-center gap-4 py-5">
@@ -84,6 +86,15 @@ export default function Home() {
                   );
                 })}
               </ul>
+              {moreServices > 0 && (
+                <Link
+                  href="/services"
+                  className="group flex items-center justify-between border-t border-cream-3 px-6 py-4 text-sm font-bold text-gold-dark transition-colors hover:text-gold-deep"
+                >
+                  <span>Edhe {moreServices} shërbime të tjera</span>
+                  <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
               <div className="flex flex-wrap items-center justify-between gap-3 bg-gold-deep px-6 py-4 text-sm font-bold text-cream">
                 <span className="inline-flex items-center gap-2">
                   <GlobeIcon className="h-4 w-4" />
@@ -99,7 +110,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Services />
+      <Services compact />
       <WhyFortesa />
       <Testimonials />
       <CtaBand />
