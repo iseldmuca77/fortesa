@@ -80,7 +80,7 @@ export default function ContactPage() {
 
             <div className="mt-10 overflow-hidden rounded-xl border border-gold/20">
               <iframe
-                title="Harta, Rruga Pandeli Cale, Tiranë"
+                title="Harta, Rruga Frang Bardhi, Tiranë"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(SITE.mapQuery)}&output=embed`}
                 width="100%"
                 height="220"
