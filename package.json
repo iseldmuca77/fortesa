@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "check:blog": "node scripts/check-blog.mjs"
   },
   "dependencies": {
     "next": "^15.5.26",

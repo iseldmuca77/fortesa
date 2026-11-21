@@ -197,3 +197,26 @@ body {
   background: #c9a54a;
   opacity: 1;
 }
+
+/* Readable, server-rendered buyer guides. Tables scroll within the article. */
+.blog-content {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #34322d;
+  overflow-wrap: break-word;
+}
+.blog-content h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 1.1rem;
+  color: #141414;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+.blog-content p { margin: 1rem 0; }
+.blog-content ul { margin: 1.25rem 0; padding-left: 1.35rem; list-style: disc; }
+.blog-content li { padding-left: 0.35rem; margin: 0.65rem 0; }
+.blog-content li::marker { color: #8a6a1e; }
+.blog-content table { overflow-wrap: normal; }
+@media (min-width: 640px) { .blog-content { font-size: 1.0625rem; } }

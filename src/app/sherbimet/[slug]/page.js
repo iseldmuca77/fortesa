@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHeader from "../../components/PageHeader";
 import CtaBand from "../../components/CtaBand";
+import BlogSection from "../../components/BlogSection";
 import Faq from "../../components/Faq";
 import JsonLd from "../../components/JsonLd";
 import { ArrowRightIcon, CheckIcon, MailIcon, PhoneIcon, SERVICE_ICONS } from "../../components/Icons";
@@ -164,6 +165,7 @@ export default async function ServicePage({ params }) {
       </section>
 
       <CtaBand />
+      <BlogSection serviceSlug={slug} />
     </>
   );
 }

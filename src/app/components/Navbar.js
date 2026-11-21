@@ -26,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav aria-label="Navigimi kryesor" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Navigimi kryesor" className="hidden items-center gap-1 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -41,7 +41,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <a
             href={SITE.phoneHref}
             className="inline-flex items-center gap-2 text-sm font-semibold text-cream/80 transition-colors hover:text-gold"
@@ -61,7 +61,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Mbyll menunë" : "Hap menunë"}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold lg:hidden"
         >
           {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile navigation */}
       {open && (
-        <div id="mobile-nav" className="border-t border-gold/20 bg-ink md:hidden">
+        <div id="mobile-nav" className="border-t border-gold/20 bg-ink lg:hidden">
           <nav aria-label="Navigimi mobil" className="space-y-1 px-4 py-4">
             {NAV_LINKS.map((link) => (
               <Link

@@ -6,6 +6,7 @@ import WhyFortesa from "./components/WhyFortesa";
 import Testimonials from "./components/Testimonials";
 import FaqSection from "./components/FaqSection";
 import CtaBand from "./components/CtaBand";
+import BlogSection from "./components/BlogSection";
 import { ArrowRightIcon, GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
 import { FEATURED_SERVICES, ROUTES, SERVICES, SITE } from "./lib/site";
 import { HOME_FAQS } from "./lib/faqs";
@@ -119,6 +120,7 @@ export default function Home() {
       <Services compact />
       <WhyFortesa />
       <Testimonials />
+      <BlogSection />
       <FaqSection
         title="Pyetje të shpeshta për Fortesa"
         lead="Përgjigjet e pyetjeve që na bëjnë më shpesh klientët para se të fillojmë një projekt."

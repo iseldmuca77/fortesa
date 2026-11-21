@@ -1,0 +1,665 @@
+[
+  {
+    "slug": "sistemet-hotel-i-ri-para-hapjes",
+    "title": "Çfarë sistemesh i duhen një hoteli të ri para hapjes? Lista e plotë",
+    "category": "hotels",
+    "serviceSlug": "instalime-elektrike",
+    "summary": "Një listë praktike për të koordinuar energjinë, rrjetin, Wi-Fi, bravat, telefoninë dhe sigurinë përpara se të mbyllen punimet.",
+    "seoTitle": "Sistemet e një hoteli të ri: lista para hapjes",
+    "seoDescription": "Planifikoni instalimet elektrike, Wi-Fi, bravat, telefoninë dhe sigurinë e hotelit. Lista e vendimeve, provave dhe dokumenteve para hapjes.",
+    "primaryQuestion": "Cilat sisteme teknike duhet të planifikoj për hotelin përpara hapjes?",
+    "intro": [
+      "Një hotel i ri ka nevojë për sisteme që funksionojnë së bashku: energji elektrike, rrjet të dhënash, Wi-Fi, kontroll hyrjeje, komunikim dhe siguri. Vendimet për këto sisteme duhen marrë përpara përfundimit të mureve e tavaneve, sepse kabllimi, vendet e pajisjeve dhe hapësirat teknike ndikojnë njëri-tjetrin.",
+      "Lista më poshtë është një udhëzues për koordinimin e instalimeve dhe përgatitjen e kërkesës për ofertë. Ajo nuk zëvendëson projektet e objektit, kërkesat e autoriteteve apo një listë ligjore për licencimin e hotelit. Nevojat përfundimtare varen nga godina, kapaciteti dhe shërbimet që do të ofroni."
+    ],
+    "sections": [
+      {
+        "id": "nisni-me-operimin",
+        "title": "Përcaktoni si do të punojë hoteli",
+        "paragraphs": [
+          "Përpara listës së pajisjeve, përgatitni planimetrinë dhe një përshkrim të shkurtër të punës së përditshme. Një hotel me recepsion gjatë gjithë kohës ka nevoja të ndryshme nga një strukturë me hyrje të pavarur të klientëve. Shënoni edhe zgjerimet e planifikuara, që të mos blini kapacitet që mbaron ditën e hapjes."
+        ],
+        "bullets": [
+          "Numri i dhomave, kateve, shtretërve dhe ambienteve të përbashkëta.",
+          "Restoranti, kuzhina, lavanderia, magazinat, parkimi dhe sallat e takimeve.",
+          "Programi i recepsionit, mënyra e regjistrimit të klientëve dhe kush administron aksesin.",
+          "Data e synuar e hapjes dhe punimet që janë ende të mundshme pa prishje."
+        ]
+      },
+      {
+        "id": "infrastruktura",
+        "title": "Mbyllni projektin e infrastrukturës përpara finiturave",
+        "table": {
+          "headers": [
+            "Sistemi",
+            "Çfarë duhet vendosur herët",
+            "Çfarë duhet kërkuar në dorëzim"
+          ],
+          "rows": [
+            [
+              "Instalimet elektrike",
+              "Ngarkesat, qarqet, panelet dhe nevojat e furnizimit rezervë, sipas projektit",
+              "Skema, etiketim dhe dokumentet e provave"
+            ],
+            [
+              "Kabllimi i rrjetit",
+              "Rrugët e kabllove, prizat dhe vendi i kabinetit teknik",
+              "Lista e pikave dhe rezultatet e testimit të lidhjeve"
+            ],
+            [
+              "Wi-Fi",
+              "Vendosja e pikave të aksesit dhe furnizimi i tyre",
+              "Matje dhe prova në dhoma e ambiente të përbashkëta"
+            ],
+            [
+              "Bravat",
+              "Lloji i dyerve, përmasat dhe mënyra e menaxhimit të hyrjes",
+              "Provë me klient, staf, kartë të humbur dhe bateri të dobët"
+            ],
+            [
+              "Telefonia",
+              "Telefonat e dhomave, recepsioni dhe lidhja me operatorin",
+              "Provë thirrjesh dhe e funksioneve të dakorduara"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Koordinoni projektuesin, zbatuesin e instalimeve, furnitorin e dyerve dhe ofruesin e programit të hotelit. Për shembull, një pikë Wi-Fi në mur mund të ketë porta për telefon IP ose televizor, por kërkesat për energji dhe kapacitet duhen kontrolluar për modelin konkret.",
+          "Koordinoni gjithashtu ngrohjen, ftohjen e ventilimin, furnizimin me ujë, instalimet hidraulike dhe ashensorët kur parashikohen në objekt. Këto sisteme projektohen dhe verifikohen nga profesionistët përkatës, sepse ndikojnë në energjinë, hapësirat teknike dhe rrugët e instalimeve. Kjo listë përqendrohet te instalimet e përshkruara në artikull; përmendja e sistemeve të tjera shërben për koordinimin e projektit dhe nuk nënkupton se Fortesa i furnizon ose i instalon."
+        ]
+      },
+      {
+        "id": "siguria",
+        "title": "Trajtoni sigurinë si projekt më vete",
+        "paragraphs": [
+          "Detektimi i zjarrit, njoftimi dhe procedurat e reagimit duhen koordinuar me projektin e mbrojtjes nga zjarri dhe profesionistët përgjegjës. Kuzhina, dhomat, magazina dhe hapësirat teknike nuk kanë të njëjtat kushte. Numri i dhomave, i vetëm, nuk përcakton pajisjet që kërkohen.",
+          "Për kamerat dhe kontrollin e aksesit, përcaktoni qëllimin, zonat, personat që mund të shohin të dhënat dhe mënyrën e administrimit. Mos e trajtoni shikimin e kamerave nga telefoni si shërbim rojeje ose reagimi nga personel: këto janë marrëveshje të ndryshme."
+        ]
+      },
+      {
+        "id": "integrimet",
+        "title": "Kërkoni demonstrim të integrimeve",
+        "paragraphs": [
+          "Shprehja 'lidhet me programin e hotelit' duhet të shoqërohet me emrin dhe versionin e programit, funksionet e përfshira dhe kostot e licencave. Regjistrimi i një klienti, ndërrimi i dhomës dhe largimi i tij duhen provuar në praktikë, me të dhëna prove.",
+          "Dokumentacioni i Yeastar tregon, për shembull, se integrimi i caktuar me PMS kërkon modele, versione dhe abonim të përshtatshëm. Ky është një shembull i arsyes pse përputhshmëria kontrollohet për kombinimin konkret të pajisjeve; nuk është premtim se çdo program lidhet me çdo central."
+        ]
+      },
+      {
+        "id": "prova-hapja",
+        "title": "Bëni një ditë prove përpara klientit të parë",
+        "bullets": [
+          "Provoni udhëtimin e klientit: regjistrim, hyrje në dhomë, Wi-Fi, telefonatë në recepsion dhe largim.",
+          "Provoni procedurat e stafit: ndërrim dhome, revokim aksesi dhe raportim defekti.",
+          "Organizoni me përgjegjësit prova të kontrolluara për ndërprerjet e energjisë ose internetit.",
+          "Merrni inventarin, dokumentet, akseset administrative dhe kopjet e konfigurimeve me mënyrë të sigurt.",
+          "Përcaktoni personin përgjegjës, trajnimin dhe kushtet e ndihmës pas dorëzimit."
+        ]
+      },
+      {
+        "id": "kerkesa-per-oferte",
+        "title": "Çfarë t’i dërgoni Fortesa-s për një kërkesë të qartë",
+        "paragraphs": [
+          "Dërgoni qytetin, planimetrinë, numrin e dhomave, fazën e punimeve dhe datën e hapjes. Shtoni programin e recepsionit dhe pajisjet që keni blerë. Kërkoni një preventiv me pajisjet, kabllimin, montimin, konfigurimin, provat, licencat dhe përjashtimet të ndara. Kjo e bën krahasimin e ofertave më të dobishëm sesa krahasimi i një shume përfundimtare pa përmbajtje."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "A duhen blerë të gjitha pajisjet menjëherë?",
+        "answer": "Fillimisht duhen përcaktuar projekti, ndërvarësitë dhe infrastruktura. Blerjet mund të organizohen me faza, në përputhje me punimet dhe afatin e hapjes."
+      },
+      {
+        "question": "A është kjo lista e dokumenteve për licencimin e hotelit?",
+        "answer": "Jo. Është një listë për koordinimin teknik. Dokumentet dhe kërkesat zyrtare duhen verifikuar me profesionistët dhe autoritetet përgjegjëse për objektin."
+      }
+    ],
+    "sources": [
+      {
+        "label": "TP-Link: EAP615-Wall",
+        "url": "https://www.tp-link.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "note": "Dokumentacion për pikë Wi-Fi në mur, porta dhe kërkesa PoE. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Yeastar: Hotel PMS Integration Guide",
+        "url": "https://help.yeastar.com/en/p-series-appliance-edition/integrations/oracle-opera/oracle-hospitality-opera-integration-with-yeastar.html",
+        "note": "Kërkesat dhe kufizimet e një integrimi konkret me PMS. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Bosch: Fire alarm system design",
+        "url": "https://www.boschbuildingtechnologies.com/lifesafetysystems/en/products/fire-alarm-system-design/",
+        "note": "Burim teknik për projektimin dhe përputhshmërinë e sistemit; nuk përcakton kërkesat ligjore shqiptare. Kontrolluar më 21 nëntor 2026."
+      }
+    ],
+    "relatedSlugs": [
+      "wifi-hotel-20-50-100-dhoma",
+      "centrali-telefonik-hotel-pbx-voip-pms",
+      "brava-karte-kod-telefon-hotel-airbnb"
+    ],
+    "publishedAt": "2026-11-21",
+    "updatedAt": "2026-11-21",
+    "status": "published",
+    "author": "Fortesa"
+  },
+  {
+    "slug": "brava-karte-kod-telefon-hotel-airbnb",
+    "title": "Bravë me kartë, me kod apo me telefon: cila i përshtatet hotelit apo Airbnb-së?",
+    "category": "hotels",
+    "serviceSlug": "brava-elektrike-hoteleri",
+    "summary": "Krahasoni mënyrën e hyrjes, punën e recepsionit dhe menaxhimin e problemeve përpara se të zgjidhni bravën elektronike.",
+    "seoTitle": "Brava për hotel dhe Airbnb: kartë, kod apo telefon?",
+    "seoDescription": "Si të zgjidhni bravën me kartë, kod ose telefon për hotel dhe Airbnb: dyert, akseset e përkohshme, bateritë dhe kostot e menaxhimit.",
+    "primaryQuestion": "A duhet të zgjedh bravë me kartë, me kod apo me telefon për strukturën time?",
+    "intro": [
+      "Zgjedhja varet nga mënyra si i prisni klientët. Karta është një mundësi praktike kur ka recepsion dhe dorëzim fizik. Kodi mund të ndihmojë hyrjen e pavarur. Telefoni mund të bashkojë aksesin me një përvojë digjitale, por kërkon që pajisja, aplikacioni dhe klienti ta mbështesin atë mënyrë hyrjeje.",
+      "Këto janë mënyra identifikimi, jo domosdoshmërisht tri lloje të ndara bravash. Disa sisteme pranojnë më shumë se një mënyrë. Kontrolloni modelin dhe konfigurimin konkret: emërtimi 'bravë inteligjente' nuk garanton kartë, kod, hapje në distancë dhe integrim me rezervimet në të njëjtën paketë."
+    ],
+    "sections": [
+      {
+        "id": "krahasimi",
+        "title": "Krahasimi sipas punës së përditshme",
+        "table": {
+          "headers": [
+            "Mënyra",
+            "Kur ia vlen të shqyrtohet",
+            "Çfarë duhet provuar"
+          ],
+          "rows": [
+            [
+              "Kartë",
+              "Hotel me recepsion; hyrje e thjeshtë pa përdorur telefonin personal",
+              "Lëshimi, humbja dhe zëvendësimi i kartës; aksesi i stafit"
+            ],
+            [
+              "Kod",
+              "Apartament me hyrje të pavarur ose mbërritje jashtë orarit",
+              "Kodi unik, afati i vlefshmërisë dhe revokimi"
+            ],
+            [
+              "Telefon",
+              "Strukturë me proces digjital të klientit",
+              "Telefonat e mbështetur, aktivizimi i çelësit dhe mënyra rezervë e hyrjes"
+            ],
+            [
+              "Kombinim",
+              "Klientë me preferenca dhe nevoja të ndryshme",
+              "Nëse të gjitha mënyrat janë të përfshira në model dhe licencë"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "hoteli",
+        "title": "Për hotelin: mendoni për recepsionin dhe stafin",
+        "paragraphs": [
+          "Një sistem i përshtatshëm duhet ta bëjë të qartë kush mund të hyjë, në cilat ambiente dhe gjatë cilit interval. Pyetni si lëshohet aksesi i klientit dhe si ndryshon ai kur zgjatet qëndrimi ose ndërrohet dhoma. Për stafin, përcaktoni role sipas detyrës, në vend që çdo punonjës të ketë akses të njëjtë.",
+          "Kërkoni demonstrim të trajtimit të një karte të humbur. Mos supozoni se një veprim në kompjuter përditëson menjëherë çdo bravë: mënyra dhe koha e përditësimit varen nga arkitektura online ose offline dhe nga produkti. Ky është një detaj që duhet të jetë i kuptueshëm për personin në recepsion."
+        ]
+      },
+      {
+        "id": "airbnb",
+        "title": "Për Airbnb: provoni gjithë rrugën deri te dera",
+        "paragraphs": [
+          "Aksesi pa takim është i dobishëm vetëm nëse klienti mund të kalojë edhe hyrjen e pallatit, portën dhe hapësirat e përbashkëta. Një bravë në apartament nuk i zgjidh automatikisht këto pika. Kontrolloni edhe autorizimet e nevojshme për çdo ndryshim në hyrjet e përbashkëta.",
+          "Përdorni si kriter blerjeje mundësinë për akses të veçantë dhe të kufizuar në kohë për çdo qëndrim, nëse sistemi e mbështet. Një kod i përbashkët që qarkullon te shumë klientë është i vështirë për t’u administruar. Përcaktoni kush e ndihmon klientin kur udhëzimi nuk kuptohet ose hyrja nuk funksionon."
+        ]
+      },
+      {
+        "id": "kontrolli-deres",
+        "title": "Dera duhet kontrolluar përpara porosisë",
+        "bullets": [
+          "Materiali, trashësia, drejtimi i hapjes dhe mekanizmi ekzistues i derës.",
+          "Përmasat e bravës, cilindrit dhe hapësira për montimin e pjesëve.",
+          "Përdorimi brenda ose jashtë dhe kushtet e mjedisit për modelin e zgjedhur.",
+          "Përputhshmëria me kërkesat e derës, sidomos kur është pjesë e mbrojtjes nga zjarri ose e daljes së emergjencës."
+        ],
+        "paragraphs": [
+          "Ndryshimet në dyer me funksion sigurie duhen vlerësuar nga profesionisti përgjegjës. Për një seri dhomash, kërkoni provë në një derë përpara porosisë së të gjithë sasisë."
+        ]
+      },
+      {
+        "id": "kostot-dhe-rezerva",
+        "title": "Llogaritni administrimin dhe mënyrën rezervë",
+        "paragraphs": [
+          "Krahasoni jo vetëm bravën, por edhe pajisjet e programimit, kartat, lidhjen me rrjetin, programin, licencat, bateritë dhe montimin. Zgjidhje të ndryshme mund të kenë pagesa të ndryshme të vazhdueshme. Salto KS, për shembull, dokumenton menaxhim në cloud dhe disa mënyra aksesi; kjo nuk do të thotë se çdo bravë e tregut i ofron të njëjtat funksione.",
+          "Kërkoni një provë të baterisë së dobët, telefonit pa bateri dhe humbjes së internetit, sipas udhëzimeve të prodhuesit. Përcaktoni një procedurë rezervë të autorizuar dhe kush e zbaton. Mos e bazoni pranimin e klientëve vetëm te një telefon ose te një llogari e vetme administratori."
+        ]
+      },
+      {
+        "id": "kerkesa",
+        "title": "Për një propozim të përshtatur",
+        "paragraphs": [
+          "Dërgoni fotografi dhe përmasa të derës, numrin e dhomave, praninë e recepsionit dhe mënyrën e dëshiruar të hyrjes. Nëse përdorni program rezervimesh, përfshini emrin e tij. Fortesa mund ta përdorë këtë informacion për të diskutuar kërkesën dhe për të përcaktuar çfarë duhet kontrolluar në objekt përpara ofertës."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "A funksionon brava kur bie interneti?",
+        "answer": "Varet nga modeli dhe nga mënyra e aksesit. Hapja lokale dhe menaxhimi në distancë mund të kenë varësi të ndryshme. Kërkoni provë të skenarit konkret përpara blerjes."
+      },
+      {
+        "question": "A është gjithmonë i nevojshëm aplikacioni i klientit?",
+        "answer": "Jo për çdo sistem. Kartat dhe kodet mund të ofrojnë alternativa, ndërsa aksesi me telefon varet nga teknologjia dhe produkti. Kontrolloni përvojën që do të ketë klienti juaj."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Salto KS: funksionet dhe mënyrat e aksesit",
+        "url": "https://saltosystems.com/en/solutions/salto-ks/",
+        "note": "Shembull prodhuesi për çelësa digjitalë, PIN, të drejta me orar dhe administrim në cloud. Nuk është deklaratë për pajisjet që ofron Fortesa. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Vingcard: Electronic Hotel Locks",
+        "url": "https://www.vingcard.com/en/products/electronic-locks",
+        "note": "Kategori e bravave elektronike të projektuara për hoteleri. Kontrolluar më 21 nëntor 2026."
+      }
+    ],
+    "relatedSlugs": [
+      "sistemet-hotel-i-ri-para-hapjes",
+      "centrali-telefonik-hotel-pbx-voip-pms"
+    ],
+    "publishedAt": "2026-11-21",
+    "updatedAt": "2026-11-21",
+    "status": "published",
+    "author": "Fortesa"
+  },
+  {
+    "slug": "wifi-hotel-20-50-100-dhoma",
+    "title": "Wi-Fi për hotel: sa access point-e duhen për 20, 50 dhe 100 dhoma?",
+    "category": "hotels",
+    "serviceSlug": "rrjete-wifi",
+    "summary": "Numri i dhomave nuk mjafton për të numëruar pikat Wi-Fi. Shihni skenarët e planifikimit, kapacitetin dhe provat që duhen kërkuar.",
+    "seoTitle": "Wi-Fi hoteli: pikat e aksesit për 20, 50, 100 dhoma",
+    "seoDescription": "Sa pika Wi-Fi duhen në hotel? Skenarë për 20, 50 e 100 dhoma, kabllimi, PoE, kapaciteti dhe testimi përpara pranimit të instalimit.",
+    "primaryQuestion": "Sa pika aksesi Wi-Fi duhen për hotelin tim?",
+    "intro": [
+      "Nuk ka një raport universal 'një access point për kaq dhoma'. Numri i pikave Wi-Fi përcaktohet nga planimetria, muret, katet, vendosja e pajisjeve dhe ngarkesa e pritshme. Një sinjal që shihet në telefon nuk provon se lidhja do të jetë e qëndrueshme kur hoteli të jetë plot.",
+      "Për një kërkesë paraprake mund të krahasoni dy mënyra: pika brenda dhomave dhe pika në zona të zgjedhura që mbulojnë disa ambiente. Zgjedhja përfundimtare duhet mbështetur në projekt dhe matje në objekt. Shifrat më poshtë shpjegojnë një skenar, jo një rekomandim instalimi për çdo hotel."
+    ],
+    "sections": [
+      {
+        "id": "skenaret",
+        "title": "Çfarë do të thotë skenari 'një pikë për dhomë'?",
+        "table": {
+          "headers": [
+            "Madhësia e hotelit",
+            "Nëse projekti zgjedh 1 pikë brenda çdo dhome",
+            "Çfarë mbetet për t’u projektuar"
+          ],
+          "rows": [
+            [
+              "20 dhoma",
+              "20 pika për dhomat",
+              "Recepsioni, korridoret, restoranti dhe ambientet e jashtme"
+            ],
+            [
+              "50 dhoma",
+              "50 pika për dhomat",
+              "Zonat e përbashkëta, kapaciteti i rrjetit dhe shpërndarja sipas kateve"
+            ],
+            [
+              "100 dhoma",
+              "100 pika për dhomat",
+              "Zonat e përbashkëta, lidhjet mes kateve dhe kapaciteti i menaxhimit"
+            ]
+          ]
+        },
+        "note": "Ky është numërim aritmetik i një arkitekture të mundshme. Nuk është minimum, maksimum ose garanci mbulimi. Një projekt tjetër mund të kërkojë sasi të tjera.",
+        "paragraphs": [
+          "Një pikë brenda dhomës shmang mbështetjen vetëm te sinjali që kalon nga korridori përmes mureve, por shton nevojën për kabllim dhe porta rrjeti. Edhe me pika brenda çdo dhome, vendosja dhe parametrat duhen planifikuar që pajisjet të mos ndërhyjnë te njëra-tjetra."
+        ]
+      },
+      {
+        "id": "mbulimi-kapaciteti",
+        "title": "Mbulimi dhe kapaciteti janë dy kontrolle të ndryshme",
+        "paragraphs": [
+          "Mbulimi pyet nëse lidhja arrin aty ku përdoret. Kapaciteti pyet nëse rrjeti e përballon përdorimin e njëkohshëm. Një dhomë mund të ketë disa telefona, laptopë ose televizorë; salla e takimeve mund të grumbullojë shumë pajisje në një hapësirë.",
+          "Shpejtësia e shkruar në kutinë e një pike Wi-Fi nuk është shpejtësia e garantuar e internetit për klientin. TP-Link e sqaron këtë në dokumentacionin e EAP615-Wall: rezultatet ndryshojnë sipas klientëve, materialeve të ndërtesës, trafikut dhe kushteve të rrjetit. Prandaj oferta duhet të përcaktojë çfarë do të provohet, në çfarë pikash dhe me çfarë ngarkese."
+        ]
+      },
+      {
+        "id": "infrastruktura",
+        "title": "Çfarë duhet të përfshijë oferta përtej pikave Wi-Fi",
+        "bullets": [
+          "Kabllimi, prizat, etiketimi dhe testimi i lidhjeve.",
+          "Switch-et me numër portash dhe fuqi PoE të mjaftueshme për pajisjet e zgjedhura.",
+          "Router-i, lidhja me internetin dhe kapaciteti i lidhjeve ndërmjet kateve.",
+          "Kontrolluesi dhe mënyra e administrimit, përfshirë licencat nëse kërkohen.",
+          "Ndarja e rrjetit të klientëve nga pajisjet e recepsionit dhe sistemet e brendshme.",
+          "Pajisjet për ambiente të jashtme kur planifikohen tarraca, oborre ose pishina."
+        ],
+        "paragraphs": [
+          "PoE do të thotë furnizim me energji përmes kabllit të rrjetit. Kontrolloni standardin dhe buxhetin e energjisë të switch-it; prania e një porte me emrin PoE nuk mjafton për çdo kombinim pajisjesh. Për shembull, dokumentacioni i EAP615-Wall vendos kushte të veçanta për furnizimin e pajisjeve të tjera nga porta e tij."
+        ]
+      },
+      {
+        "id": "provat",
+        "title": "Pranojeni rrjetin pasi ta provoni në vendet reale",
+        "paragraphs": [
+          "Provoni lidhjen brenda dhomave me dyer të mbyllura, pranë vendeve ku klienti punon dhe në ambientet e përbashkëta. Përdorni më shumë se një model telefoni ose laptopi. Nëse kalimi mes zonave është pjesë e kërkesës, provoni edhe lëvizjen gjatë përdorimit.",
+          "Ruani një listë të pikave të testuara dhe të problemeve për korrigjim. Kërkoni dorëzim të planit të pajisjeve, emërtimeve, konfigurimit dhe aksesit administrativ. Wi-Fi duhet të mbetet i administrueshëm edhe kur ndryshon personi që kujdeset për hotelin."
+        ]
+      },
+      {
+        "id": "planifikimi",
+        "title": "Si të merrni një propozim për 20, 50 ose 100 dhoma",
+        "paragraphs": [
+          "Dërgoni Fortesa-s planimetrinë, numrin e kateve, materialet kryesore të mureve dhe gjendjen e kabllimit. Shtoni kapacitetin e lidhjes së internetit dhe përdorimet kryesore: video, punë në distancë, konferenca ose televizorë të lidhur. Kërkoni që sasia e pajisjeve të lidhet me një plan vendosjeje dhe prova pranimi, jo vetëm me numrin e dhomave."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "A mjafton një router i fortë për të gjithë hotelin?",
+        "answer": "Kjo nuk mund të përcaktohet nga fuqia e reklamuar. Duhet vlerësuar planimetria, pengesat dhe numri i përdoruesve. Hoteli mund të kërkojë disa pika të menaxhuara dhe kabllim të përshtatshëm."
+      },
+      {
+        "question": "A duhet përdorur mesh në vend të kabllimit?",
+        "answer": "Kjo varet nga objekti dhe mundësia e shtrirjes së kabllove. Lidhjet pa kabllo ndërmjet pikave kanë kufizimet e tyre; kërkoni krahasim dhe testim të zgjidhjes konkrete."
+      }
+    ],
+    "sources": [
+      {
+        "label": "TP-Link: specifikimet dhe kufizimet e EAP615-Wall",
+        "url": "https://www.tp-link.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "note": "Shembull pike Wi-Fi për dhomë, kërkesa PoE dhe dallimi ndërmjet vlerave laboratorike e performancës reale. Skenarët 20/50/100 janë llogaritje ilustruese të këtij artikulli. Kontrolluar më 21 nëntor 2026."
+      }
+    ],
+    "relatedSlugs": [
+      "sistemet-hotel-i-ri-para-hapjes",
+      "centrali-telefonik-hotel-pbx-voip-pms"
+    ],
+    "publishedAt": "2026-11-21",
+    "updatedAt": "2026-11-21",
+    "status": "published",
+    "author": "Fortesa"
+  },
+  {
+    "slug": "centrali-telefonik-hotel-pbx-voip-pms",
+    "title": "Centrali telefonik i hotelit: PBX apo VoIP, dhe si lidhet me programin e recepsionit?",
+    "category": "hotels",
+    "serviceSlug": "telefoni-hoteleri",
+    "summary": "PBX dhe VoIP nuk janë dy alternativa të kundërta. Ja si të zgjidhni centralin, telefonat dhe integrimin me programin e hotelit.",
+    "seoTitle": "Telefonia e hotelit: PBX, VoIP dhe integrimi me PMS",
+    "seoDescription": "Zgjidhni telefoninë e hotelit duke krahasuar telefonat analogë e IP, centralin lokal ose cloud, licencat dhe integrimin me recepsionin.",
+    "primaryQuestion": "Çfarë centrali telefonik i duhet hotelit dhe a lidhet ai me programin e recepsionit?",
+    "intro": [
+      "PBX është centrali që organizon telefonat dhe thirrjet e hotelit. VoIP është teknologjia që transporton zërin përmes një rrjeti IP. Pra, një central PBX mund të përdorë VoIP; pyetja praktike është cilët telefona, çfarë infrastrukture dhe çfarë funksionesh i duhen hotelit.",
+      "Programi i recepsionit quhet shpesh PMS, shkurtim për Property Management System. Integrimi me të mund të automatizojë veprime, por nuk duhet supozuar vetëm sepse të dyja pajisjet lidhen me internetin. Duhet kontrolluar kombinimi i saktë i centralit, versionit, licencës dhe programit të hotelit."
+    ],
+    "sections": [
+      {
+        "id": "alternativat",
+        "title": "Krahasoni arkitekturën sipas gjendjes së hotelit",
+        "table": {
+          "headers": [
+            "Zgjidhja",
+            "Çfarë duhet vlerësuar",
+            "Pyetja kryesore"
+          ],
+          "rows": [
+            [
+              "Telefona analogë me central ose gateway të përshtatshëm",
+              "Gjendja e kabllimit dhe telefonave ekzistues",
+              "Cilat pajisje ruhen dhe cilat funksione mbështeten?"
+            ],
+            [
+              "Telefona IP me IP PBX",
+              "Rrjeti, portat, energjia dhe konfigurimi",
+              "A është infrastruktura gati për telefonat e dhomave?"
+            ],
+            [
+              "Central në objekt",
+              "Pajisja lokale, furnizimi dhe administrimi",
+              "Kush kujdeset për të dhe çfarë ndodh në një defekt?"
+            ],
+            [
+              "Central në cloud",
+              "Lidhja me shërbimin dhe pagesat e vazhdueshme",
+              "Çfarë vazhdon të punojë kur ndërpritet lidhja?"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Një rinovim mund të ruajë pjesë të instalimit ekzistues, nëse përputhshmëria dhe gjendja e tyre verifikohen. Një hotel i ri ka më shumë mundësi ta koordinojë telefoninë me kabllimin e rrjetit. Zgjedhja duhet të mbështetet në funksionin dhe koston totale, jo vetëm në etiketën 'IP'."
+        ]
+      },
+      {
+        "id": "funksionet",
+        "title": "Ndajini funksionet e nevojshme nga ato opsionale",
+        "paragraphs": [
+          "Shkruani si duhet të kalojë një telefonatë nga dhoma te recepsioni, ku shkon nëse nuk merr përgjigje dhe cilat thirrje të jashtme lejohen. Numri i telefonave nuk është i njëjtë me numrin e thirrjeve të jashtme të njëkohshme. Të dyja duhen përfshirë në kërkesë."
+        ],
+        "bullets": [
+          "Numrat e brendshëm për dhomat, recepsionin dhe departamentet.",
+          "Transferimi i thirrjeve dhe drejtimi i tyre sipas orarit të stafit.",
+          "Zgjimi me telefon, vetëm nëse është shërbim që do të ofrohet.",
+          "Rregullat për thirrjet e jashtme dhe faturimin, nëse përdoren.",
+          "Trajtimi i telefonatave të emergjencës sipas kërkesave të zbatueshme dhe operatorit."
+        ]
+      },
+      {
+        "id": "pms",
+        "title": "Si verifikohet lidhja me programin e recepsionit",
+        "paragraphs": [
+          "Kërkoni një përgjigje me shkrim nga furnitorët për emrin dhe versionin e PMS-së, modelin e centralit, versionin e programit të tij, protokollin e integrimit dhe licencat. Sqaroni kush do ta konfigurojë secilën anë dhe kush e zgjidh një problem kur dy sistemet nuk shkëmbejnë të dhëna.",
+          "Si shembull konkret, dokumentacioni aktual i Yeastar për P-Series Appliance përshkruan integrim përmes FIAS dhe e kufizon te modelet P550, P560 e P570 me version dhe abonim të përshtatshëm. Disa funksione varen edhe nga PMS-ja; faturimi i thirrjeve ka kërkesa shtesë të planit. Kjo nuk përbën rekomandim të një marke ose garanci për integrim me programin tuaj."
+        ],
+        "note": "Kërkesat e licencimit dhe përputhshmërisë ndryshojnë. Kontrollojini përsëri përpara porosisë; mos blini mbi bazën e një liste të vjetër funksionesh."
+      },
+      {
+        "id": "prova-integrimit",
+        "title": "Prova që duhet të shihni përpara dorëzimit",
+        "bullets": [
+          "Regjistrim prove i klientit dhe shfaqje e saktë e dhomës ose emrit, nëse funksioni është përfshirë.",
+          "Ndërrim dhome pa lënë të dhënat e klientit te dhoma e vjetër.",
+          "Largim i klientit dhe rivendosje e rregullave të thirrjeve.",
+          "Zgjim me telefon dhe raportim i dështimit, nëse kjo është pjesë e marrëveshjes.",
+          "Faturim prove dhe krahasim i vlerave në central e PMS, nëse përdoret.",
+          "Procedurë për ndërprerjen e internetit, energjisë ose integrimit, e provuar në mënyrë të kontrolluar."
+        ]
+      },
+      {
+        "id": "kosto",
+        "title": "Çfarë përfshihet në koston totale",
+        "paragraphs": [
+          "Oferta duhet të ndajë telefonat, centralin ose shërbimin cloud, gateway-t nëse duhen, kabllimin, switch-et, konfigurimin dhe trajnimin. Shtoni licencën e integrimit, tarifat e operatorit dhe kushtet e mbështetjes. Një telefon me çmim të ulët nuk përcakton koston e të gjithë sistemit.",
+          "Për një kërkesë te Fortesa, dërgoni numrin e dhomave, telefonat dhe kabllimin ekzistues, emrin e operatorit dhe emrin/versionin e PMS-së. Listoni funksionet që ju duhen realisht. Kjo lejon një propozim të qartë dhe një provë pranimi që lidhet me punën e recepsionit."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "A duhet të ndërroj të gjithë telefonat analogë?",
+        "answer": "Jo domosdoshmërisht. Disa arkitektura përdorin gateway për telefona analogë, por përputhshmëria, kabllimi dhe funksionet duhen kontrolluar për pajisjet ekzistuese."
+      },
+      {
+        "question": "A përfshihet integrimi me PMS në çdo central?",
+        "answer": "Jo. Mund të kërkojë model, version, licencë ose shërbim shtesë. Kërkoni konfirmim dhe demonstrim për programin e saktë që përdor hoteli."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Yeastar: Hotel PBX Phone System",
+        "url": "https://www.yeastar.com/solution/hotel-phone-system/",
+        "note": "Shembuj arkitekturash me telefona analogë/IP dhe funksione hotelerie. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Yeastar: Hotel PMS Integration Guide",
+        "url": "https://help.yeastar.com/en/p-series-appliance-edition/integrations/oracle-opera/oracle-hospitality-opera-integration-with-yeastar.html",
+        "note": "Burimi teknik për modelet, FIAS, licencat dhe kufizimet e integrimit të përshkruar. Kontrolluar më 21 nëntor 2026."
+      }
+    ],
+    "relatedSlugs": [
+      "wifi-hotel-20-50-100-dhoma",
+      "sistemet-hotel-i-ri-para-hapjes"
+    ],
+    "publishedAt": "2026-11-21",
+    "updatedAt": "2026-11-21",
+    "status": "published",
+    "author": "Fortesa"
+  },
+  {
+    "slug": "detektimi-zjarrit-hotel-restorant-magazine-kosto",
+    "title": "Detektimi i zjarrit në hotel, restorant dhe magazinë: çfarë kërkohet dhe sa kushton?",
+    "category": "hotels",
+    "serviceSlug": "detektim-zjarri",
+    "summary": "Si të përgatitni një kërkesë për sistem detektimi zjarri dhe të krahasoni ofertat pa ngatërruar çmimin e një detektori me një sistem të plotë.",
+    "seoTitle": "Detektimi i zjarrit: hotel, restorant, magazinë dhe kosto",
+    "seoDescription": "Çfarë të kërkoni në projektin dhe preventivin e detektimit të zjarrit: pajisjet, kabllimi, provat, dokumentet dhe faktorët që përcaktojnë koston.",
+    "primaryQuestion": "Çfarë duhet të përfshijë sistemi i detektimit të zjarrit për objektin tim dhe si përcaktohet kostoja?",
+    "intro": [
+      "Çmimi i një sistemi detektimi zjarri përcaktohet nga projekti i objektit, rreziqet, pajisjet, kabllimi dhe provat e nevojshme. Çmimi i një detektori të vetëm nuk është çmimi i një sistemi të përshtatshëm për hotel, restorant apo magazinë. Pa këto të dhëna, një total i vetëm do të ishte hamendësim.",
+      "Kërkesat për objektin duhen përcaktuar nga profesionisti i kualifikuar dhe i autorizuar për projektin, në përputhje me kërkesat vendore dhe autoritetet përgjegjëse. Ky artikull ndihmon për kërkesën dhe krahasimin e ofertave; nuk jep projekt, miratim teknik ose listë ligjore të detyrimeve në Shqipëri."
+    ],
+    "sections": [
+      {
+        "id": "lloji-objektit",
+        "title": "Pse ndryshon projekti sipas përdorimit të objektit",
+        "table": {
+          "headers": [
+            "Objekti",
+            "Të dhënat që ndikojnë në vlerësim",
+            "Çfarë të mos supozoni"
+          ],
+          "rows": [
+            [
+              "Hotel",
+              "Dhomat, katet, korridoret, kuzhina dhe hapësirat teknike",
+              "Se një pajisje për çdo dhomë përbën projekt të plotë"
+            ],
+            [
+              "Restorant",
+              "Kuzhina, avulli, nxehtësia, klientët dhe ambientet e shërbimit",
+              "Se çdo detektor tymi është i përshtatshëm për çdo zonë"
+            ],
+            [
+              "Magazinë",
+              "Lartësia, raftet, mallrat, pluhuri dhe mënyra e përdorimit",
+              "Se vetëm sipërfaqja në metra katrorë përcakton sasinë"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Bosch i trajton veçmas zonat dhe kushtet e ndryshme të një hoteli në dokumentacionin e tij teknik. Kjo ilustron pse zgjedhja e detektimit duhet t’i përshtatet mjedisit. Një detektor i zgjedhur pa vlerësim mund të mos i përgjigjet nevojës ose mund të krijojë alarme të padëshiruara."
+        ]
+      },
+      {
+        "id": "kerkesa",
+        "title": "Çfarë informacioni duhet të përgatisni",
+        "bullets": [
+          "Planimetrinë, sipërfaqet, lartësitë dhe përdorimin e çdo ambienti.",
+          "Projektin ekzistues të mbrojtjes nga zjarri dhe kërkesat që keni marrë nga autoritetet.",
+          "Pajisjet ekzistuese, markën/modelin dhe dokumentet e tyre.",
+          "Sistemet e tjera me të cilat projekti kërkon ndërveprim.",
+          "Fazën e punimeve, mundësinë e kalimit të kabllove dhe kufizimet gjatë funksionimit të biznesit."
+        ]
+      },
+      {
+        "id": "shembull-cmimi",
+        "title": "Një shembull çmimi pajisjeje në treg",
+        "paragraphs": [
+          "Më 21 nëntor 2026, Gjirafa50.al listonte detektorin adresues të tymit Satel DRP-400 me 6 250 lekë, përfshirë TVSH-në. Ky është çmimi i publikuar nga shitësi për një artikull; nuk është ofertë Fortesa, çmim montimi ose çmim sistemi të plotë. Transporti dhe përmbajtja e paketës duhen verifikuar te shitësi.",
+          "Shembulli shërben vetëm për të treguar një zë pajisjeje në preventiv. Modeli nuk rekomandohet këtu për objektin tuaj: përputhshmëria me centralin, nevoja për bazë dhe përshtatshmëria për ambientin duhet të konfirmohen në projekt. Çmimi dhe disponueshmëria mund të ndryshojnë."
+        ]
+      },
+      {
+        "id": "preventivi",
+        "title": "Sa kushton: kërkoni këto zëra të ndarë",
+        "paragraphs": [
+          "Një preventiv i krahasueshëm duhet të mbështetet te e njëjta kërkesë teknike. Kërkoni sasinë, modelin, njësinë dhe çmimin për çdo zë. Vlera e sistemit formohet nga pajisjet, materialet, puna, konfigurimi, provat dhe dokumentacioni; kontrolloni edhe taksat dhe përjashtimet."
+        ],
+        "table": {
+          "headers": [
+            "Zëri",
+            "Çfarë duhet sqaruar"
+          ],
+          "rows": [
+            [
+              "Vlerësimi dhe projekti",
+              "Kush e kryen, çfarë dokumentesh jep dhe çfarë përfshin"
+            ],
+            [
+              "Centrali dhe furnizimi",
+              "Kapaciteti, përputhshmëria dhe pajisjet mbështetëse sipas projektit"
+            ],
+            [
+              "Pajisjet në objekt",
+              "Detektorët, pikat manuale, sinjalizuesit dhe modulet e kërkuara"
+            ],
+            [
+              "Materialet dhe instalimi",
+              "Kabllot, rrugët, montimi dhe punimet e përfshira ose të përjashtuara"
+            ],
+            [
+              "Vënia në punë",
+              "Konfigurimi, provat, dokumentet dhe udhëzimi i personelit"
+            ],
+            [
+              "Kujdesi pas dorëzimit",
+              "Kontrollet e kërkuara, përgjegjësitë dhe mënyra e tarifimit"
+            ]
+          ]
+        },
+        "note": "Vlera përfundimtare në lekë ose euro kërkon projektin dhe listën e sasive. Kontrolloni nëse oferta përfshin TVSH-në, montimin, provat dhe dokumentacionin."
+      },
+      {
+        "id": "perputhshmeria",
+        "title": "Përputhshmëria ka rëndësi po aq sa çmimi",
+        "paragraphs": [
+          "Kërkoni dokumentacionin e përputhshmërisë së pajisjeve me centralin dhe kërkesat e projektit. Një emër standardi në një fletë produkti, i vetëm, nuk provon se instalimi i plotë është projektuar, zbatuar dhe pranuar siç duhet.",
+          "Për zgjerimin e një sistemi ekzistues, duhen kontrolluar kapaciteti, pajisjet e mbështetura dhe gjendja e kabllimit. Mos supozoni se çdo pajisje e re mund të lidhet me centralin e vjetër. Dokumentacioni i projektimit të prodhuesit duhet përdorur nga personi përgjegjës për zgjedhjen dhe verifikimin teknik."
+        ]
+      },
+      {
+        "id": "dorezimi",
+        "title": "Çfarë të kërkoni në përfundim",
+        "paragraphs": [
+          "Kërkoni planin e pajisjeve, identifikimin e zonave ose pikave, dokumentet e provave, udhëzimet dhe procesverbalet përkatëse. Provat duhet të organizohen nga profesionistët përgjegjës dhe të koordinohen me funksionimin e objektit.",
+          "Personeli duhet të dijë si të njohë një alarm ose defekt dhe cilën procedurë të ndjekë. Njoftimi në një telefon nuk është i njëjtë me mbikëqyrjen nga personel ose me njoftimin automatik të shërbimeve të emergjencës. Çdo shërbim i tillë duhet të jetë i përcaktuar dhe i konfirmuar veçmas. Një sistem i dorëzuar kërkon edhe përgjegjësi të qartë për kontrollet pasuese."
+        ]
+      },
+      {
+        "id": "hapi-tjeter",
+        "title": "Hapi i parë për ofertën e objektit tuaj",
+        "paragraphs": [
+          "Kontaktoni Fortesa-n me qytetin, llojin e objektit, planimetrinë dhe dokumentacionin ekzistues. Sqaroni nëse kërkoni instalim të ri, zgjerim apo vlerësim të një sistemi që ka probleme. Në këtë mënyrë diskutimi nis nga kërkesa reale e objektit dhe nga puna që duhet përcaktuar, përpara përzgjedhjes së pajisjeve."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "A mund ta llogaris numrin e detektorëve vetëm nga sipërfaqja?",
+        "answer": "Jo me besueshmëri. Vendosja dhe lloji varen edhe nga përdorimi, lartësia, ndarjet, kushtet e mjedisit dhe projekti përkatës."
+      },
+      {
+        "question": "A zëvendëson detektimi i zjarrit sistemin e shuarjes?",
+        "answer": "Jo. Detektimi, njoftimi, evakuimi dhe shuarja kanë funksione të ndryshme. Nevoja dhe ndërveprimi i tyre përcaktohen në projektin e objektit."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Bosch: Fire alarm system design",
+        "url": "https://www.boschbuildingtechnologies.com/lifesafetysystems/en/products/fire-alarm-system-design/",
+        "note": "Planifikimi, kapaciteti dhe kontrollet e përputhshmërisë së sistemit. Burim prodhuesi, jo interpretim i kërkesave ligjore shqiptare. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Bosch: Fire safety in hotels",
+        "url": "https://www.boschbuildingtechnologies.com/lifesafetysystems/en/industries/fire-safety-in-hotels/",
+        "note": "Shembuj të kushteve të ndryshme në dhoma, kuzhina dhe hapësira teknike; nuk përdoren si projekt për një objekt konkret. Kontrolluar më 21 nëntor 2026."
+      },
+      {
+        "label": "Gjirafa50.al: çmimi i Satel DRP-400",
+        "url": "https://www.gjirafa50.al/detektor-tymi-adresues-satel-drp-400-optik-fotoelektrik-led-tregues-i-bardhe",
+        "note": "6 250 lekë me TVSH në faqen e produktit, kontrolluar më 21 nëntor 2026. Shembull çmimi për një pajisje, jo preventiv sistemi apo rekomandim projektimi."
+      }
+    ],
+    "relatedSlugs": [
+      "sistemet-hotel-i-ri-para-hapjes"
+    ],
+    "publishedAt": "2026-11-21",
+    "updatedAt": "2026-11-21",
+    "status": "published",
+    "author": "Fortesa"
+  }
+]
