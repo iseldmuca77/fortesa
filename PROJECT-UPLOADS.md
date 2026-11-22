@@ -1,6 +1,6 @@
 # Architect project uploads
 
-Status on 22 November 2026: implemented locally on `codex/architect-project-upload`, **connected to live providers and tested locally, but not pushed or published**. The recipient is `fortesaalbania@gmail.com`. Supabase private storage/schema checks passed, `projects.fortesa.al` is Verified in Resend, and an authorized synthetic PDF/DWG browser test completed with a Resend **Delivered** report. Six Vercel server variables are saved for **Production only**, with `PROJECT_UPLOADS_ENABLED=false`; branch-specific Preview setup and release review remain pending. Existing `/kontakt` draft behavior is unchanged.
+This guide covers Fortesa's architect upload flow, provider configuration, verification and day-to-day operation. Project notifications go to `fortesaalbania@gmail.com`; Fortesa reviews the plans, prepares an itemized quote and replies manually on WhatsApp. The separate `/kontakt` draft flow remains unchanged.
 
 ## Visitor and owner workflow
 
@@ -10,7 +10,7 @@ Files upload directly to a private Supabase bucket; the Vercel function handles 
 
 Signature validation is not antivirus scanning or proof that a drawing is valid. The owner email explains this. Keep file viewers current and do not run scripts/macros supplied by an uploader.
 
-## Completed setup and remaining release work
+## Provider configuration and release
 
 The owner completed the free account setup. `supabase/project-uploads.sql` was executed successfully in the authenticated Supabase SQL Editor. `supabase/verify-project-uploads.sql` then reported **CHECKS PASSED** and rolled back its synthetic rows. It verified RLS/minimal grants, the private `architect-projects` bucket and 20 MiB cap, reservations, retry bounds, completion claims and capacity/rate limits. This is actual database execution, not only static review.
 
@@ -18,7 +18,7 @@ The dedicated Resend sending subdomain **projects.fortesa.al** is Verified. The 
 
 Server credentials are stored in ignored local configuration and Vercel Secret variables. The Supabase value is a modern `sb_secret_` key; the application retains the variable name `SUPABASE_SERVICE_ROLE_KEY` for compatibility. Modern keys belong in the `apikey` header and must not be treated as JWT Bearer tokens. Never expose this variable through `NEXT_PUBLIC_*`, commit its value, or print it in logs.
 
-All six variables below are saved for **Production only** in the existing Vercel project. The production enable flag is **false**. The feature branch has not been pushed, and branch-specific Preview values have not yet been configured. Saving variables does not deploy or activate the new feature.
+Release checkpoint, 22 November 2026: all six variables below are saved in the existing Vercel project for **Production**, with the enable flag **false**, and for **Preview scoped only to `codex/architect-project-upload`**, with the flag **true**. The [enabled review preview](https://fortesa-git-codex-architect-project-upload-iselds-projects.vercel.app/dergo-projektin) passed an authorized synthetic PDF/DWG upload and email delivery test. Production activation remains an owner-approved release step; saving variables or deploying a feature branch does not activate production.
 
 ```dotenv
 PROJECT_UPLOADS_ENABLED=false
@@ -29,11 +29,11 @@ RESEND_API_KEY=SET_PRIVATELY_IN_VERCEL
 PROJECT_UPLOAD_FROM=projekte@projects.fortesa.al
 ```
 
-Before launch:
+Production release procedure:
 
-1. Prepare the remote feature branch and configure only its intended Vercel Preview environment. Use separate test resources/credentials where practical. Keep production disabled while reviewing the preview.
-2. Complete the final build and review the deployed page and upload flow. The final enabled build is underway at this checkpoint. Confirm the preview's origin, environment scopes, provider access and private-file behavior. Test validation, interruption/retry and notification failure/retry as appropriate to changes since the local checks; never use real customer plans for setup tests. A provider acceptance ID alone is not a delivery report.
-3. Complete Fortesa's Albanian wording/technical review and agree the practical file review/retention process. Follow `WEBSITE-WORKFLOW.md` for the remaining publication decision and release. Current rollback baseline for this proposed release is production `737ff314180a0b924701d006fcbc12dbd8e885b7`.
+1. Review the actual preview, Albanian wording, technical scope and test results with the owner. Keep production disabled until the release is approved.
+2. After approval, set `PROJECT_UPLOADS_ENABLED=true` in Production and deploy the reviewed change through the existing main-branch workflow. Preserve server-only credentials and environment scopes. Current rollback baseline for this release is `737ff314180a0b924701d006fcbc12dbd8e885b7`.
+3. Verify the public page, canonical/sitemap behavior and enquiry flow after deployment, using only authorized synthetic data for delivery tests. Check the private-file behavior and clean up the exact test data. A provider acceptance ID alone is not a delivery report. Keep manual queue/capacity review in place; automatic retention remains unconfigured.
 
 Configuration requires a redeploy: the page's availability and sitemap inclusion are rendered at build time. When disabled or missing any required configuration, the API returns 503, the submit button is disabled, the page has noindex, and it is omitted from the sitemap. WhatsApp remains visible as an alternative. No mock-success mode is deployed.
 
@@ -41,7 +41,7 @@ Configuration requires a redeploy: the page's availability and sitemap inclusion
 
 - Each IP gets at most three new reservations per rolling hour. The whole site gets at most 20 per rolling day. IPs are HMAC-derived before persistence, and trusted forwarded headers are read only on Vercel; local development shares a loopback identity.
 - Every signed upload path initially reserves the bucket's **full 20 MiB cap**, not its claimed length. Total reservations stop at 750 MiB, below the Free 1 GB storage allowance. After all immutable objects are verified, one update records receipt and reduces the reservation to actual bytes. Abandoned/invalid reservations keep counting, so capacity fails closed.
-- A submission can request at most eight rounds of signed upload URLs. Tokens use `upsert:false`; completed paths cannot be replaced using them. Upload completion expires after two hours. Retried token issuance can leave a token valid until nearly four hours after initial reservation.
+- A submission can request at most eight rounds of signed upload URLs. Tokens use `upsert:false`; completed paths cannot be replaced using them. Upload completion expires after two hours. The server returns that expiry; an incomplete expired session restarts while retaining the form and files. Fully uploaded sessions keep their notification retry path. Retried token issuance can leave a token valid until nearly four hours after initial reservation.
 - Completion claims serialize validation/notification attempts with a 90-second lease and at most 12 claims. Retries preserve the browser's files and completed upload steps. Header verification reads eight bytes with a Range request, not whole drawings.
 - A project is recorded before its email is sent. The browser reports success only after provider acceptance and recording the notification ID. On email error, it explains that files were saved but notification was not confirmed and offers retry/WhatsApp. Received rows skip repeated file verification.
 - Resend uses a stable idempotency key per submission. Automatic customer-triggered notification retries stop at 24 hours from reservation, within the provider's idempotency window. Pending rows remain available to the owner. There is no scheduled worker or automatic email retry after the visitor leaves; monitor pending rows manually and investigate before any owner-triggered resend. No inbox-delivery guarantee is made.
@@ -59,9 +59,11 @@ node --test --test-isolation=none scripts/check-contact.mjs
 node scripts/check-blog.mjs http://localhost:3010
 ```
 
-Latest verification: **22 unit tests and full lint passed**. The unit tests use in-memory provider doubles; their result alone does not establish live-provider behavior. Earlier local production-build, existing-contact and article regression checks passed, but final build/deployed-preview verification remains necessary after the latest changes.
+Verification checkpoint, 22 November 2026: **23 unit tests, full lint and the final production build passed**, including the expiry recovery and exact preview-branch origin checks. Existing-contact and article regression checks also passed. Unit tests use in-memory provider doubles; the separate live-provider checks below establish what was actually exercised.
 
-Separately, the owner-authorized local browser test used the actual providers. A 747-byte PDF and a 141-byte DWG fixture uploaded successfully; start and completion returned HTTP 200, the submission was recorded as received and its notification was confirmed. This exercised the actual metadata/Range verification path. Public and unauthenticated file URL attempts each returned HTTP 400. Resend reported **Delivered** to `fortesaalbania@gmail.com`; this is its receiving-server delivery report, not evidence of the owner reading the message or a guarantee of future inbox placement. Repeating completion returned HTTP 200 / received without sending another email. The fixtures are synthetic and do not establish full CAD parsing. Their authorized cleanup is complete: both exact test objects and the matching submission row were removed. Broader customer-file retention remains undecided. No WhatsApp message or quotation was sent. Deployed Vercel behavior has not yet been tested for this feature.
+An owner-authorized local browser test uploaded a 747-byte PDF and a 141-byte DWG fixture through the actual providers. Start/completion returned HTTP 200, the submission was recorded as received, and Resend reported **Delivered** to `fortesaalbania@gmail.com`. This exercised the real metadata/Range verification path. Public and unauthenticated file URL attempts returned HTTP 400. Repeating completion returned HTTP 200 / received without sending another email.
+
+A separate owner-authorized **hosted Vercel preview** browser test then successfully submitted synthetic PDF/DWG files and produced a Resend **Delivered** report to the same inbox. Cleanup is complete for both tests: their exact storage objects and matching synthetic submission rows were removed, and the absence of the test rows was verified. Delivery reports do not show that the owner read the messages or guarantee future inbox placement. Synthetic fixtures do not establish full CAD parsing. No WhatsApp message or quotation was sent. Production activation and its subsequent verification remain separate release steps.
 
 ## Official references checked on 22 November 2026
 
