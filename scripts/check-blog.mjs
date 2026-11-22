@@ -14,6 +14,30 @@ const posts = allPosts.filter((post) => post.status === "published" && post.publ
 assert.equal(new Set(allPosts.map((post) => post.slug)).size, allPosts.length, "Duplicate article slugs");
 assert.ok(posts.length >= 11, "The initial eleven articles must be present");
 
+const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+const timestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
+const localDate = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Tirane", year: "numeric", month: "2-digit", day: "2-digit" });
+for (const post of posts) {
+  for (const field of ["publishedAt", "updatedAt", "sourcesCheckedAt"]) {
+    assert.match(post[field], datePattern, `${post.slug}: ${field} must be an explicit calendar date`);
+    assert.equal(new Date(`${post[field]}T00:00:00Z`).toISOString().slice(0, 10), post[field], `${post.slug}: invalid ${field}`);
+    assert.ok(post[field] <= today, `${post.slug}: future ${field}`);
+  }
+  assert.ok(post.updatedAt >= post.publishedAt, `${post.slug}: updated before publication`);
+  for (const field of ["publishedAt", "updatedAt"]) {
+    const timestamp = post[`${field}ISO`];
+    if (!timestamp) continue;
+    assert.match(timestamp, timestampPattern, `${post.slug}: ${field}ISO needs a timezone`);
+    assert.equal(localDate.format(new Date(timestamp)), post[field], `${post.slug}: timestamp and editorial date disagree`);
+  }
+  if (post.image) {
+    assert.match(post.image.src, /^\/images\/[a-zA-Z0-9/_-]+(?:\.[a-zA-Z0-9_-]+)*\.(?:avif|jpe?g|png|webp)$/, `${post.slug}: use an approved local article image`);
+    assert.ok(post.image.alt?.trim(), `${post.slug}: image alt text missing`);
+    assert.ok(Number.isInteger(post.image.width) && post.image.width > 0 && Number.isInteger(post.image.height) && post.image.height > 0, `${post.slug}: image dimensions missing`);
+    await readFile(new URL(`../public${post.image.src}`, import.meta.url));
+  }
+}
+
 async function page(path, expectedStatus = 200) {
   const response = await fetch(`${base}${path}`);
   assert.equal(response.status, expectedStatus, `${path}: HTTP status`);
@@ -23,6 +47,12 @@ async function page(path, expectedStatus = 200) {
 const index = await page("/blog");
 const sitemap = await page("/sitemap.xml");
 assert.match(index, /<link[^>]+rel="canonical"[^>]+href="https:\/\/www\.fortesa\.al\/blog"/);
+for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+  const entry = match[1];
+  const loc = entry.match(/<loc>([^<]+)<\/loc>/)?.[1];
+  assert.ok(loc, "Sitemap entry without URL");
+  if (!new URL(loc).pathname.startsWith("/blog")) assert.ok(!entry.includes("<lastmod>"), `${loc}: unsupported static-page lastmod`);
+}
 const internalLinks = new Set(["/", "/kontakt"]);
 const decode = (s) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 
@@ -52,8 +82,18 @@ for (const post of posts) {
   assert.ok(article, `${path}: BlogPosting schema missing`);
   assert.equal(article.headline, post.title);
   assert.equal(article.url, `${origin}${path}`);
-  assert.equal(article.datePublished, post.publishedAt);
-  assert.equal(article.dateModified, post.updatedAt);
+  assert.equal(article.datePublished, post.publishedAtISO || post.publishedAt);
+  assert.equal(article.dateModified, post.updatedAtISO || post.updatedAt);
+  const sitemapEntry = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].find((match) => match[1].includes(`<loc>${origin}${path}</loc>`))?.[1];
+  assert.ok(sitemapEntry?.includes(`<lastmod>${post.updatedAtISO || post.updatedAt}</lastmod>`), `${path}: sitemap date differs from verified article date`);
+  const sourceSection = visibleMarkup.match(/<section\b[^>]*aria-labelledby="sources-title"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.ok(sourceSection.includes(`dateTime="${post.sourcesCheckedAt}"`) || sourceSection.includes(`datetime="${post.sourcesCheckedAt}"`), `${path}: explicit source-check date missing`);
+  const quoteHref = `/kontakt?sherbimi=${encodeURIComponent(post.serviceSlug)}`;
+  assert.ok(visibleMarkup.includes(`href="${quoteHref}"`), `${path}: contextual quotation link missing`);
+  const contentsPosition = visibleMarkup.indexOf('aria-label="Përmbajtja e artikullit"');
+  assert.ok(visibleMarkup.indexOf(`href="${quoteHref}"`) < contentsPosition, `${path}: quotation link must be visible before the contents`);
+  if (post.image) assert.equal(article.image?.url, `${origin}${post.image.src}`, `${path}: article image schema mismatch`);
+  else assert.ok(!article.image, `${path}: no unrelated placeholder article image`);
   assert.ok(graphs.some((item) => item["@type"] === "BreadcrumbList"));
   assert.ok(html.includes('href="tel:+355682010015"'), `${path}: phone CTA missing`);
   for (const section of post.sections) assert.ok(html.includes(`id="${section.id}"`), `${path}: broken contents anchor ${section.id}`);

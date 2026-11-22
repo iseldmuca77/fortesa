@@ -8,13 +8,16 @@ const BASE_URL = "https://www.fortesa.al";
 
 export const SITE = {
   name: "Fortesa",
+  legalName: "Fortesa Security.al SHPK",
+  ownerName: "Igli Muca",
   tagline: "Siguri dhe Teknologji",
   url: BASE_URL,
   description:
-    "Fortesa (fortesa.al) është kompani me qendër në Tiranë, e specializuar në kamera sigurie (CCTV), sisteme alarmi, instalime elektrike, GPS për makina, sisteme parkingu me tra automatik, porta automatike, detektim zjarri, brava elektronike për hotele, rrjete dhe Wi-Fi, telefoni për hotele dhe sisteme audio, me montim, monitorim 24/7 dhe mirëmbajtje në gjithë Shqipërinë.",
+    "Fortesa, me qendër në Tiranë, ofron kamera sigurie, alarme, instalime dhe riparime elektrike, si edhe sisteme për biznese e hotele. Ofron monitorim alarmesh 24/7 nga stafi dhe vizitë në objekt pas sinjalizimit, sipas shërbimit të dakordësuar. Pajisjet, punimet, mbulimi dhe kostot përcaktohen sipas objektit.",
   phoneDisplay: "+355 68 20 100 15",
   phoneHref: "tel:+355682010015",
   phoneE164: "+355682010015",
+  whatsappHref: "https://wa.me/355682010015",
   email: "fortesaalbania@gmail.com",
   website: "www.fortesa.al",
   websiteHref: BASE_URL,
@@ -24,11 +27,14 @@ export const SITE = {
   country: "Shqipëri",
   countryCode: "AL",
   mapQuery: "Rruga Frang Bardhi, Tirana, Albania",
-  hours: ["Të hapur 24 orë, 7 ditë në javë", "Na telefononi në çdo kohë"],
-  clients: "250+",
-  years: "8+",
+  // Opening hours confirmed by the founder; these do not promise a response SLA.
+  hours: ["Të hapur 24 orë, 7 ditë në javë"],
+  availabilityText: "Na kontaktoni për të dakordësuar vizitën dhe punën.",
+  // Numerical customer/experience claims remain unconfirmed.
+  clients: null,
+  years: null,
   /** Where Fortesa installs, as a phrase used in page copy. */
-  serviceAreaText: "në Tiranë dhe në gjithë Shqipërinë",
+  serviceAreaText: "në Tiranë dhe në Shqipëri",
   /** Public profiles (Facebook, Instagram, LinkedIn...). Full URLs added here are published as sameAs links. */
   socials: [],
 };
@@ -63,27 +69,27 @@ export const SERVICES = [
     slug: "kamera-sigurie",
     icon: "camera",
     title: "Kamera Sigurie",
-    tags: ["Montim", "Monitorim", "Mirëmbajtje"],
+    tags: ["Montim", "Konfigurim", "Akses nga telefoni"],
     description:
-      "Kamera sigurie me cilësi të lartë për shtëpi dhe biznese, me montim profesional dhe monitorim 24/7 nga telefoni ose kompjuteri juaj.",
+      "Montim kamerash sigurie për shtëpi dhe biznese: përzgjedhje e pajisjeve, kabllim, regjistrim dhe konfigurim i aksesit sipas objektit.",
     featured: true,
   },
   {
     slug: "sisteme-alarmi",
     icon: "alarm",
     title: "Sisteme Alarmi",
-    tags: ["Kundër vjedhjes", "Kundër zjarrit"],
+    tags: ["Montim", "Monitorim 24/7", "Njoftime"],
     description:
-      "Sisteme alarmi me sensorë të avancuar dhe njoftime të menjëhershme, që ju mbrojnë nga hyrjet e paautorizuara dhe nga zjarri.",
+      "Montim sistemesh alarmi dhe monitorim 24/7 nga stafi, me vizitë në objekt pas sinjalizimit sipas shërbimit të dakordësuar.",
     featured: true,
   },
   {
     slug: "instalime-elektrike",
     icon: "plug",
-    title: "Instalime Elektrike",
-    tags: ["Të plota", "Riparime", "Mirëmbajtje"],
+    title: "Instalime dhe Riparime Elektrike",
+    tags: ["Instalime", "Riparime", "Rikonstruksione"],
     description:
-      "Instalime elektrike të plota për objekte të reja, riparime dhe mirëmbajtje periodike, të kryera me siguri dhe sipas standardeve.",
+      "Punime elektrike për objekte të reja dhe rikonstruksione, si edhe riparime defektesh në shtëpi e biznese. Na përshkruani punën që ju nevojitet.",
     featured: true,
   },
   {
@@ -92,7 +98,7 @@ export const SERVICES = [
     title: "GPS për Makina",
     tags: ["Gjurmim", "Kontroll", "Monitorim në Kohë Reale"],
     description:
-      "Pajisje GPS për lokalizim të saktë të automjeteve ose flotave tuaja. Përfshin monitorim të lëvizjes nga telefoni, histori të rrugëtimeve dhe njoftime rreth sigurisë së mjetit.",
+      "Pajisje GPS për automjete dhe flota, me akses në vendndodhje, histori rrugëtimesh dhe njoftime sipas pajisjes, platformës dhe lidhjes së të dhënave.",
   },
   {
     slug: "sisteme-parkingu",
@@ -100,7 +106,7 @@ export const SERVICES = [
     title: "Sisteme Parkingu & Trau",
     tags: ["Vendosje Trau", "Biletari", "Kontroll Hyrje-Dalje"],
     description:
-      "Zgjidhje të plota automatike për menaxhimin e parkingjeve për biznese, ambiente private ose publike. Pajisur me tra automatik, sisteme biletarie dhe lexim automatik të targave.",
+      "Sisteme parkingu me tra automatik dhe kontroll hyrje-daljesh. Telekomanda, kartat, biletaria dhe njohja e targave zgjidhen sipas mënyrës së përdorimit.",
   },
   {
     slug: "porta-automatike",
@@ -108,15 +114,15 @@ export const SERVICES = [
     title: "Porta Automatike",
     tags: ["Automatisht", "Pllaka & Motora", "Komandim me Telekomandë/Telefon"],
     description:
-      "Instalim motorësh dhe sistemesh automatike për porta oborri, garazhe dhe ambiente industriale. Sigurojnë hapje/mbyllje me komandë në distancë, sensorë mbrojtës dhe besueshmëri të lartë.",
+      "Montim motorësh për porta oborri, garazhe dhe ambiente industriale. Motori, komandimi dhe pajisjet mbrojtëse përcaktohen sipas portës dhe kushteve të objektit.",
   },
   {
     slug: "detektim-zjarri",
     icon: "flame",
     title: "Sisteme Detektimi Zjarri",
-    tags: ["Detektorë Tymi", "Alarme Qendrore", "Standarde Sigurie"],
+    tags: ["Detektorë Tymi", "Qendra Alarmi", "Testim"],
     description:
-      "Sisteme profesionale për zbulimin e hershëm të tymit dhe zjarrit në objekte industriale, biznese apo komplekse banimi. Njoftim i menjëhershëm për parandalimin e çdo rreziku.",
+      "Sisteme detektimi zjarri për biznese dhe objekte banimi, me pajisje dhe mënyra njoftimi të përcaktuara sipas projektit dhe përdorimit të objektit.",
   },
   {
     slug: "brava-elektrike-hoteleri",
@@ -132,7 +138,7 @@ export const SERVICES = [
     title: "Rrjete Networku & Wi-Fi",
     tags: ["Infrastrukturë Rrjeti", "Wi-Fi Profesional", "Kabllim Strukturuar"],
     description:
-      "Dizajnim dhe shtrirje e rrjeteve kompjuterike me kabllo dhe Wi-Fi të shpejtë për shtëpi, zyra dhe hoteleri. Mbulim i plotë pa shkëputje dhe performancë e lartë transmetimi.",
+      "Kabllim dhe konfigurim rrjetesh kompjuterike e Wi-Fi për shtëpi, zyra dhe hotele. Mbulimi dhe kapaciteti planifikohen sipas hapësirave dhe përdoruesve.",
   },
   {
     slug: "telefoni-hoteleri",
@@ -140,7 +146,7 @@ export const SERVICES = [
     title: "Sisteme Telefonie për Hoteleri",
     tags: ["Qendra Telefonike (PBX/VoIP)", "Komunikim i Brendshëm", "Integrim me Software"],
     description:
-      "Zgjidhje telefonie profesionale (IP/VoIP) për hotele dhe biznese. Mundësojnë komunikim të qartë ndërmjet dhomave, recepsionit dhe stafit, si dhe integrim të plotë me sistemet e menaxhimit të hotelit.",
+      "Telefoni IP/VoIP për dhomat, recepsionin dhe stafin e hotelit. Funksionet dhe lidhja me programin e menaxhimit verifikohen për sistemet konkrete.",
   },
   {
     slug: "sisteme-audio",

@@ -1,6 +1,6 @@
 import pricePosts from "./blog/price-posts.json";
 import hotelPosts from "./blog/hotel-posts.json";
-import { SERVICES, SITE } from "./site";
+import { ROUTES, SERVICES, SITE } from "./site";
 
 export const BLOG_CATEGORIES = [
   { id: "prices", label: "Çmime & buxhet", description: "Çfarë paguani për pajisjet, çfarë përfshin montimi dhe si të krahasoni ofertat." },
@@ -9,6 +9,12 @@ export const BLOG_CATEGORIES = [
 
 const posts = [...pricePosts, ...hotelPosts];
 export const blogHref = (slug) => `/blog/${slug}`;
+export const postQuoteHref = (post) => `${ROUTES.contact}?sherbimi=${encodeURIComponent(post.serviceSlug)}`;
+
+// Keep editorial dates independent from verified publication timestamps and source checks.
+// Date-only values remain valid when an exact historical timestamp is not known.
+export const publishedTime = (post) => post.publishedAtISO || post.publishedAt;
+export const modifiedTime = (post) => post.updatedAtISO || post.updatedAt;
 
 /** Publishing is explicit. Future dates require a new deployment on/after that day. */
 export function getPublishedPosts(now = new Date()) {
@@ -54,11 +60,12 @@ export function blogPostingSchema(post) {
     description: post.summary,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
+    datePublished: publishedTime(post),
+    dateModified: modifiedTime(post),
     inLanguage: "sq-AL",
     articleSection: getCategory(post.category)?.label,
     author: { "@type": "Organization", name: post.author, url: SITE.url },
     publisher: { "@id": `${SITE.url}/#business` },
+    ...(post.image ? { image: { "@type": "ImageObject", url: new URL(post.image.src, SITE.url).toString(), width: post.image.width, height: post.image.height, caption: post.image.alt } } : {}),
   };
 }

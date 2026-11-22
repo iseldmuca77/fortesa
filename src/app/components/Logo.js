@@ -44,7 +44,7 @@ const SIZES = {
 export default function Logo({ variant = "dark", size = "md", tagline = true, className = "" }) {
   const s = SIZES[size] || SIZES.md;
   const wordClass = variant === "dark" ? "text-gold-gradient" : "text-gold-gradient-dark";
-  const tagClass = variant === "dark" ? "text-gold/85" : "text-gold-dark/85";
+  const tagClass = variant === "dark" ? "text-gold" : "text-gold-deep";
 
   return (
     <span className={`inline-flex items-center ${s.gap} ${className}`}>

@@ -5,7 +5,7 @@ import { RookMark } from "./Logo";
  * Dark title band used at the top of inner pages.
  * `breadcrumbs`: optional [{ name, href }] from the home page to this page.
  */
-export default function PageHeader({ eyebrow, title, lead, breadcrumbs }) {
+export default function PageHeader({ eyebrow, title, lead, breadcrumbs, children }) {
   return (
     <section className="relative overflow-hidden bg-ink text-cream">
       <RookMark
@@ -43,6 +43,7 @@ export default function PageHeader({ eyebrow, title, lead, breadcrumbs }) {
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight sm:text-5xl">{title}</h1>
         {lead && <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-dark">{lead}</p>}
+        {children && <div className="mt-7">{children}</div>}
       </div>
     </section>
   );

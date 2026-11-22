@@ -8,19 +8,19 @@ const EXTRAS = [
     icon: LayersIcon,
     title: "Zgjidhje të Integruara",
     description:
-      "Kombinojmë kamera, alarme dhe kontroll aksesi në një sistem të vetëm, të përshtatur për çdo objekt.",
+      "Sqaroni nëse kamerat, alarmi dhe kontrolli i aksesit duhet të punojnë së bashku. Përputhshmëria varet nga pajisjet dhe konfigurimi.",
   },
   {
     icon: WrenchIcon,
     title: "Mirëmbajtje & Konsulencë",
     description:
-      "Kontrolle periodike, përditësime dhe asistencë teknike që sistemet tuaja të punojnë gjithmonë.",
+      "Për një sistem ekzistues, na tregoni pajisjet dhe problemin. Puna dhe kushtet e mirëmbajtjes sqarohen për kërkesën konkrete.",
   },
   {
     icon: MonitorIcon,
-    title: "Monitorim në Kohë Reale",
+    title: "Monitorim alarmi 24/7",
     description:
-      "Ndiqni objektin tuaj nga telefoni ose kompjuteri dhe merrni njoftime të menjëhershme.",
+      "Stafi i Fortesa merr njoftimet e alarmit dhe kryen dalje në objekt. Mbulimi, përmbajtja e shërbimit dhe pagesat sqarohen në ofertë.",
   },
 ];
 
@@ -136,8 +136,8 @@ export default function Services({ showHeading = true, compact = false }) {
           </div>
 
           <p className="mx-auto mt-12 max-w-3xl text-center text-base leading-relaxed text-muted">
-            Me Fortesa ju merrni më shumë se pajisje sigurie: një partner të besueshëm që kujdeset për
-            mbrojtjen tuaj, duke kombinuar teknologjinë më të fundit me përvojën tonë.
+            Për të nisur kërkesën, zgjidhni shërbimin dhe na tregoni vendndodhjen, llojin e objektit
+            dhe punën që ju nevojitet. Përmbajtja e ofertës përcaktohet sipas projektit.
           </p>
         </>
       )}

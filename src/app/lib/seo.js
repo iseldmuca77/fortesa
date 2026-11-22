@@ -4,7 +4,7 @@ import { SITE } from "./site";
 export const DEFAULT_TITLE = "Fortesa | Kamera Sigurie, Alarme & Instalime Elektrike në Shqipëri";
 
 export const DEFAULT_DESCRIPTION =
-  "Fortesa (fortesa.al), Tiranë: kamera sigurie, alarme, instalime elektrike, GPS, tra parkimi, porta automatike dhe zgjidhje për hotele. Montim, monitorim 24/7, mirëmbajtje.";
+  "Fortesa, Tiranë: montim kamerash sigurie e alarmesh, instalime dhe riparime elektrike për shtëpi e biznese. Shikoni shërbimet dhe kërkoni ofertë për objektin tuaj.";
 
 export const SEO_KEYWORDS = [
   "Fortesa",
