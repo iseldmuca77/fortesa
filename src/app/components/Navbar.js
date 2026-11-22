@@ -26,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav aria-label="Navigimi kryesor" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Navigimi kryesor" className="hidden items-center gap-1 xl:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -41,7 +41,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-5 xl:flex">
           <a
             href={SITE.phoneHref}
             className="inline-flex items-center gap-2 text-sm font-semibold text-cream/80 transition-colors hover:text-gold"
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <a href={SITE.phoneHref} aria-label={`Telefononi Fortesa: ${SITE.phoneDisplay}`} className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-gold/30 text-gold hover:bg-ink-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold">
             <PhoneIcon className="h-5 w-5" />
           </a>
@@ -65,7 +65,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Mbyll menunë" : "Hap menunë"}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold xl:hidden"
         >
           {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile navigation */}
       {open && (
-        <div id="mobile-nav" className="border-t border-gold/20 bg-ink lg:hidden">
+        <div id="mobile-nav" className="border-t border-gold/20 bg-ink xl:hidden">
           <nav aria-label="Navigimi mobil" className="space-y-1 px-4 py-4">
             {NAV_LINKS.map((link) => (
               <Link

@@ -4,6 +4,7 @@ import Logo from "./components/Logo";
 import Services from "./components/Services";
 import WhyFortesa from "./components/WhyFortesa";
 import RequestSteps from "./components/RequestSteps";
+import ProjectUploadCallout from "./components/ProjectUploadCallout";
 import FaqSection from "./components/FaqSection";
 import CtaBand from "./components/CtaBand";
 import BlogSection from "./components/BlogSection";
@@ -116,6 +117,7 @@ export default function Home() {
       <Services compact />
       <WhyFortesa />
       <RequestSteps />
+      <ProjectUploadCallout />
       <BlogSection />
       <FaqSection
         title="Pyetje të shpeshta për Fortesa"

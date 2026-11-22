@@ -7,13 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "check:blog": "node scripts/check-blog.mjs"
+    "check:blog": "node scripts/check-blog.mjs",
+    "check:projects": "node --conditions=react-server --test --test-isolation=none scripts/check-project-upload.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
     "next": "^15.5.26",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,5 +1,6 @@
 import { ROUTES, SERVICES, SITE, serviceHref } from "./lib/site";
 import { blogHref, getPublishedPosts, modifiedTime } from "./lib/blog";
+import { getProjectUploadAvailability } from "./lib/project-upload-server";
 
 /** Served at /sitemap.xml. Submit it in Google Search Console and Bing Webmaster Tools. */
 export default function sitemap() {
@@ -15,6 +16,7 @@ export default function sitemap() {
     ...SERVICES.map((service) => page(serviceHref(service.slug))),
     page(ROUTES.about),
     page(ROUTES.contact),
+    ...(getProjectUploadAvailability() ? [page(ROUTES.projectUpload)] : []),
     {
       url: `${SITE.url}${ROUTES.blog}`,
       ...(lastBlogUpdate ? { lastModified: lastBlogUpdate } : {}),

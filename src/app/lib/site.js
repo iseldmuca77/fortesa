@@ -45,6 +45,7 @@ export const ROUTES = {
   about: "/rreth-nesh",
   contact: "/kontakt",
   blog: "/blog",
+  projectUpload: "/dergo-projektin",
 };
 
 /** URL of the dedicated page for one service. */
@@ -53,6 +54,7 @@ export const serviceHref = (slug) => `${ROUTES.services}/${slug}`;
 export const NAV_LINKS = [
   { href: ROUTES.home, label: "Kreu" },
   { href: ROUTES.services, label: "Shërbimet" },
+  { href: ROUTES.projectUpload, label: "Dërgo projektin" },
   { href: ROUTES.blog, label: "Blog" },
   { href: ROUTES.about, label: "Rreth Nesh" },
   { href: ROUTES.contact, label: "Kontakt" },
