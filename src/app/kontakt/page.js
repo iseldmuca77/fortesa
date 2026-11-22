@@ -1,5 +1,6 @@
 import PageHeader from "../components/PageHeader";
 import ContactForm from "../components/ContactForm";
+import ProjectUploadCallout from "../components/ProjectUploadCallout";
 import { ClockIcon, GlobeIcon, MailIcon, MapPinIcon, PhoneIcon, ShieldCheckIcon } from "../components/Icons";
 import { ROUTES, SITE } from "../lib/site";
 import { pageMetadata } from "../lib/seo";
@@ -58,6 +59,7 @@ export default function ContactPage() {
               </a>
             </div>
             <ContactForm />
+            <ProjectUploadCallout compact />
           </div>
 
           <aside className="bg-ink p-8 text-cream lg:col-span-2 lg:p-12">
