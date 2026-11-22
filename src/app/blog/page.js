@@ -5,12 +5,13 @@ import { RookMark } from "../components/Logo";
 import { BLOG_CATEGORIES, blogHref, getPublishedPosts } from "../lib/blog";
 import { pageMetadata } from "../lib/seo";
 import { breadcrumbSchema, graph } from "../lib/schema";
-import { ROUTES, SITE } from "../lib/site";
+import { ROUTES, SERVICES, SITE, serviceHref } from "../lib/site";
 
 export const metadata = pageMetadata({ title: "Blog: çmime, siguri dhe sisteme për hotele", description: "Udhëzues në shqip për kamerat, alarmet, portat, GPS dhe sistemet e hotelit. Krahasoni pajisjet, planifikoni buxhetin dhe përgatitni kërkesën për ofertë.", path: ROUTES.blog });
 
 export default function BlogPage() {
   const posts = getPublishedPosts();
+  const priorityServices = SERVICES.filter((service) => ["kamera-sigurie", "sisteme-alarmi", "instalime-elektrike"].includes(service.slug));
   return (
     <>
       <JsonLd data={graph(breadcrumbSchema([{ name: "Kreu", href: "/" }, { name: "Blog", href: ROUTES.blog }]), { "@type": "CollectionPage", name: "Blogu Fortesa", url: `${SITE.url}${ROUTES.blog}`, inLanguage: "sq-AL", mainEntity: { "@type": "ItemList", itemListElement: posts.map((post, index) => ({ "@type": "ListItem", position: index + 1, name: post.title, url: `${SITE.url}${blogHref(post.slug)}` })) } })} />
@@ -20,13 +21,14 @@ export default function BlogPage() {
           <nav aria-label="Vendndodhja në faqe" className="mb-9 flex gap-3 text-xs font-semibold text-muted-dark"><Link href="/" className="hover:text-cream">Kreu</Link><span aria-hidden="true">/</span><span aria-current="page" className="text-gold">Blog</span></nav>
           <p className="eyebrow">Blogu Fortesa</p>
           <h1 className="mt-5 max-w-4xl font-display text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Planifikoni me kujdes.<br /><span className="text-gold">Zgjidhni me siguri.</span></h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-dark">Çmime orientuese, krahasime dhe lista praktike për shtëpinë, biznesin dhe hotelin tuaj. Filloni me pyetjen që keni sot.</p>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-dark">Shembuj çmimesh për pajisjet, krahasime dhe lista praktike për të përgatitur kërkesën për ofertë. Çmimi i montimit përcaktohet sipas objektit dhe punës së kërkuar.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             {BLOG_CATEGORIES.map((category) => <a key={category.id} href={`#${category.id}`} className="rounded-full border border-gold/35 px-5 py-3 text-sm font-semibold transition-colors hover:bg-gold hover:text-ink">{category.label}<span className="ml-3 text-xs opacity-70">{posts.filter((post) => post.category === category.id).length}</span></a>)}
           </div>
         </div>
       </section>
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <nav aria-label="Shërbimet kryesore" className="mb-12 rounded-2xl border border-cream-3 bg-white/70 p-6"><p className="text-sm font-bold">Po kërkoni montim ose riparim?</p><div className="mt-4 flex flex-wrap gap-x-7 gap-y-3">{priorityServices.map((service) => <Link key={service.slug} href={serviceHref(service.slug)} className="text-sm font-semibold text-gold-deep underline decoration-gold-dark/40 underline-offset-4 hover:decoration-gold-dark">{service.title}</Link>)}</div></nav>
         {BLOG_CATEGORIES.map((category) => (
           <section key={category.id} id={category.id} className="mb-16 scroll-mt-28 last:mb-0" aria-labelledby={`${category.id}-title`}>
             <div className="mb-8 max-w-3xl"><p className="eyebrow eyebrow-deep">{category.id === "prices" ? "01 / Para ofertës" : "02 / Para hapjes"}</p><h2 id={`${category.id}-title`} className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">{category.label}</h2><p className="mt-3 leading-relaxed text-muted">{category.description}</p></div>

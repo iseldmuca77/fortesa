@@ -51,7 +51,7 @@
       {"label": "Gjirafa50 — NVR Hikvision me 4 kanale", "url": "https://www.gjirafa50.al/nvr-hikvision-ds-7104ni-q14pm-4-kanale-4-porta-poe-i-bardhe", "note": "Kontrolluar më 21.11.2026: 10 650 lekë me TVSH; faqja tregonte mbi 10 artikuj. Përmbajtja e paketimit dhe përputhshmëria duhen konfirmuar."}
     ],
     "relatedSlugs": ["sa-kushton-sistemi-alarmit"],
-    "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   },
   {
     "slug": "sa-kushtojne-bravat-me-karte-hotel",
@@ -78,7 +78,7 @@
       {"label": "LockChoice — BS-301 RFID Hotel Lock", "url": "https://lockchoice.com/homepage-featured/homepage-featured-hotel-locks/bs-301-rfid-mortise-deadbolt-weatherproof-hotel-card-lock.html", "note": "Kontrolluar më 21.11.2026: nga 169,99 USD, shënuar në stok. Encoder/software/karta blihen veçmas; bateritë nuk përfshihen."},
       {"label": "LockChoice — Digilock Mifare1 Software and Encoder", "url": "https://lockchoice.com/hotel-lock/mifare1-software-and-encoder.html", "note": "Kontrolluar më 21.11.2026: 600 USD, shënuar në stok. Shembull i paketës së përbashkët të menaxhimit."}
     ],
-    "relatedSlugs": ["brava-karte-kod-telefon-hotel-airbnb", "sistemet-hotel-i-ri-para-hapjes"], "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "relatedSlugs": ["brava-karte-kod-telefon-hotel-airbnb", "sistemet-hotel-i-ri-para-hapjes"], "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   },
   {
     "slug": "sa-kushton-trau-parkimit-automatik",
@@ -102,7 +102,7 @@
       {"question": "A është kamera për targat e përfshirë?", "answer": "Vetëm kur është shkruar në ofertë bashkë me programin, lidhjet dhe konfigurimin. Nuk është pjesë e çdo trau automatik."}
     ],
     "sources": [{"label": "JD Traffic Safety Systems — Parklio, tra automatik 4 metra", "url": "https://www.trafficsafetysystems.eu/en/parklio-automatic-gate-barrier-4-meter.html", "note": "Kontrolluar më 21.11.2026: 2 550 euro pa taksa, 3 085,50 euro me taksën e shfaqur; dorëzimi pas konsultimit. Shembull ndërkombëtar pajisjeje."}],
-    "relatedSlugs": ["sa-kushton-motorizimi-portes"], "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "relatedSlugs": ["sa-kushton-motorizimi-portes"], "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   },
   {
     "slug": "sa-kushton-motorizimi-portes",
@@ -129,7 +129,7 @@
       {"label": "Vārtu Veikals — NICE ROBO600 MAXI KIT", "url": "https://www.vartuveikals.lv/products/nice-16/4015", "note": "Kontrolluar më 21.11.2026: 414 euro; lista përfshin fotocelula, llambë dhe kremalierë 5 m. Taksa dhe dorëzimi duhen konfirmuar."},
       {"label": "Vārtu Veikals — NICE WINGO 2024KIT", "url": "https://www.vartuveikals.lv/products/nice-2/877", "note": "Kontrolluar më 21.11.2026: 441 euro; përmbajtja e listuar ndryshon nga kiti rrëshqitës. Taksa dhe dorëzimi duhen konfirmuar."}
     ],
-    "relatedSlugs": ["sa-kushton-trau-parkimit-automatik"], "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "relatedSlugs": ["sa-kushton-trau-parkimit-automatik"], "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   },
   {
     "slug": "sa-kushton-sistemi-alarmit",
@@ -153,7 +153,7 @@
       {"question": "A mjafton një kit i vetëm për vilën?", "answer": "Kjo nuk mund të vendoset pa planimetrinë dhe listën e pajisjeve. Hyrjet, katet dhe zonat e kërkuara përcaktojnë zgjerimin."}
     ],
     "sources": [{"label": "CCTV.al — Dahua ART-ARC3000H-03-W2 Alarm Kit WiFi", "url": "https://cctv.al/product/sistem-alarmi-dahua-art-arc3000h-03-w2-alarm-kit-wifi/", "note": "Kontrolluar më 21.11.2026: 16 900 lekë. TVSH-ja dhe lista e plotë e pajisjeve nuk u sqaruan në faqen e produktit; kërkojnë konfirmim."}],
-    "relatedSlugs": ["sa-kushton-montimi-kamerave-tirane"], "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "relatedSlugs": ["sa-kushton-montimi-kamerave-tirane"], "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   },
   {
     "slug": "gps-makina-flota-pajisja-montimi-abonimi",
@@ -181,6 +181,6 @@
       {"label": "Getic — Teltonika FMC920", "url": "https://www.getic.com/product/teltonika-fmc920", "note": "Kontrolluar më 21.11.2026: 54,75 euro pa TVSH, në stok; faqja përmend Floomli si platformë përdorimi."},
       {"label": "Floomli GPS — planet dhe çmimet", "url": "https://floomligps.com/en/pricing", "note": "Kontrolluar më 21.11.2026: Free 0 euro, Single 4,99 euro/muaj, Fleet 10 13,99 euro/muaj. Pajisjet dhe SIM-et veçmas; TVSH-ja kërkon konfirmim."}
     ],
-    "relatedSlugs": [], "publishedAt": "2026-11-21", "updatedAt": "2026-11-21", "status": "published", "author": "Fortesa"
+    "relatedSlugs": [], "publishedAt": "2026-11-21", "publishedAtISO": "2026-11-21T15:54:16Z", "updatedAt": "2026-11-21", "updatedAtISO": "2026-11-21T15:54:16Z", "sourcesCheckedAt": "2026-11-21", "status": "published", "author": "Fortesa"
   }
 ]

@@ -54,6 +54,10 @@ export default function Navbar() {
           </Link>
         </div>
 
+        <div className="flex items-center gap-2 lg:hidden">
+          <a href={SITE.phoneHref} aria-label={`Telefononi Fortesa: ${SITE.phoneDisplay}`} className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-gold/30 text-gold hover:bg-ink-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold">
+            <PhoneIcon className="h-5 w-5" />
+          </a>
         {/* Mobile menu toggle */}
         <button
           type="button"
@@ -65,6 +69,7 @@ export default function Navbar() {
         >
           {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
+        </div>
       </div>
 
       {/* Mobile navigation */}

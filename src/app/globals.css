@@ -70,7 +70,9 @@ body {
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: anywhere;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   }
   .btn-sm {
@@ -133,7 +135,7 @@ body {
     opacity: 0.7;
   }
   .eyebrow-deep {
-    color: #8a6a1e;
+    color: #735311;
   }
 
   /* Outlined gold circle used for service icons (as on the business card) */
@@ -179,23 +181,6 @@ body {
   .animate-fade-up {
     animation: none;
   }
-}
-
-/* Swiper (testimonials) in brand colors ---------------------------------- */
-.testimonials-swiper {
-  padding-bottom: 3rem;
-}
-.testimonials-swiper .swiper-slide {
-  height: auto;
-  display: flex;
-}
-.swiper-pagination-bullet {
-  background: #8a6a1e;
-  opacity: 0.35;
-}
-.swiper-pagination-bullet-active {
-  background: #c9a54a;
-  opacity: 1;
 }
 
 /* Readable, server-rendered buyer guides. Tables scroll within the article. */

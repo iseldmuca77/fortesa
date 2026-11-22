@@ -3,12 +3,12 @@ import Link from "next/link";
 import Logo from "./components/Logo";
 import Services from "./components/Services";
 import WhyFortesa from "./components/WhyFortesa";
-import Testimonials from "./components/Testimonials";
+import RequestSteps from "./components/RequestSteps";
 import FaqSection from "./components/FaqSection";
 import CtaBand from "./components/CtaBand";
 import BlogSection from "./components/BlogSection";
-import { ArrowRightIcon, GlobeIcon, PhoneIcon, SERVICE_ICONS, StarIcon } from "./components/Icons";
-import { FEATURED_SERVICES, ROUTES, SERVICES, SITE } from "./lib/site";
+import { ArrowRightIcon, GlobeIcon, PhoneIcon, SERVICE_ICONS } from "./components/Icons";
+import { FEATURED_SERVICES, ROUTES, SERVICES, SITE, serviceHref } from "./lib/site";
 import { HOME_FAQS } from "./lib/faqs";
 import { pageMetadata } from "./lib/seo";
 
@@ -26,6 +26,7 @@ export default function Home() {
           alt=""
           fill
           priority
+          quality={60}
           sizes="100vw"
           className="object-cover opacity-20"
         />
@@ -36,30 +37,22 @@ export default function Home() {
           <div className="lg:col-span-7">
             <p className="eyebrow animate-fade-up">Siguri dhe Teknologji</p>
             <h1 className="animate-fade-up fade-delay-1 mt-5 font-display text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
-              Siguria juaj, <span className="text-gold-gradient">prioriteti ynë</span>
+              Kamera sigurie, alarme dhe <span className="text-gold-gradient">punime elektrike</span>
             </h1>
             <p className="animate-fade-up fade-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
-              Kamera sigurie, sisteme alarmi, instalime elektrike, GPS, porta automatike, rrjete dhe
-              zgjidhje për hoteleri {SITE.serviceAreaText}. Montim, monitorim dhe mirëmbajtje me
-              teknologji moderne.
+              Fortesa, me qendër në Tiranë, kryen montime dhe riparime për shtëpi dhe biznese.
+              Na tregoni vendndodhjen dhe punën që ju nevojitet, që të sqarojmë kërkesën tuaj.
             </p>
             <div className="animate-fade-up fade-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link href={ROUTES.contact} className="btn btn-gold">
-                Na Kontaktoni
-              </Link>
-              <Link href={ROUTES.services} className="btn btn-outline">
-                Shërbimet Tona
+              <a href={SITE.phoneHref} className="btn btn-gold">
+                <PhoneIcon className="h-4 w-4" /> Telefononi
+              </a>
+              <Link href={ROUTES.contact} className="btn btn-outline">
+                Kërkoni një ofertë
               </Link>
             </div>
             <div className="animate-fade-up fade-delay-4 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
-              <span className="inline-flex items-center gap-2 font-semibold text-cream/80">
-                <span className="flex gap-0.5 text-gold" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <StarIcon key={i} className="h-4 w-4" />
-                  ))}
-                </span>
-                Mbi 250 klientë të kënaqur
-              </span>
+              <span className="font-semibold text-cream/80">Për shtëpi, dyqane dhe biznese</span>
               <a
                 href={SITE.phoneHref}
                 className="inline-flex items-center gap-2 font-semibold text-cream/80 transition-colors hover:text-gold"
@@ -81,14 +74,17 @@ export default function Home() {
                 {FEATURED_SERVICES.map((service) => {
                   const Icon = SERVICE_ICONS[service.icon];
                   return (
-                    <li key={service.slug} className="flex items-center gap-4 py-5">
+                    <li key={service.slug}>
+                      <Link href={serviceHref(service.slug)} className="group flex items-center gap-4 rounded-lg py-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-deep">
                       <span className="icon-ring h-14 w-14">
                         <Icon className="h-6 w-6" />
                       </span>
-                      <div>
-                        <p className="text-lg font-bold">{service.title}</p>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-lg font-bold group-hover:text-gold-deep">{service.title}</p>
                         <p className="text-sm text-muted">{service.tags.join(" · ")}</p>
                       </div>
+                      <ArrowRightIcon className="h-4 w-4 shrink-0 text-gold-deep" />
+                      </Link>
                     </li>
                   );
                 })}
@@ -107,10 +103,10 @@ export default function Home() {
                   <GlobeIcon className="h-4 w-4" />
                   {SITE.website}
                 </span>
-                <span className="inline-flex items-center gap-2">
+                <a href={SITE.phoneHref} className="inline-flex items-center gap-2 hover:underline">
                   <PhoneIcon className="h-4 w-4" />
                   {SITE.phoneDisplay}
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -119,11 +115,11 @@ export default function Home() {
 
       <Services compact />
       <WhyFortesa />
-      <Testimonials />
+      <RequestSteps />
       <BlogSection />
       <FaqSection
         title="Pyetje të shpeshta për Fortesa"
-        lead="Përgjigjet e pyetjeve që na bëjnë më shpesh klientët para se të fillojmë një projekt."
+        lead="Informacion për shërbimet, vendndodhjen dhe përgatitjen e kërkesës për ofertë."
         items={HOME_FAQS}
       />
       <CtaBand />

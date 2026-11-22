@@ -20,6 +20,7 @@ export function businessSchema() {
     "@type": ["LocalBusiness", "ProfessionalService", "Electrician"],
     "@id": BUSINESS_ID,
     name: SITE.name,
+    ...(SITE.legalName ? { legalName: SITE.legalName } : {}),
     alternateName: ["Fortesa Albania", "Fortesa.al"],
     slogan: SITE.tagline,
     description: SITE.description,
@@ -35,6 +36,7 @@ export function businessSchema() {
       addressCountry: SITE.countryCode,
     },
     areaServed: AREA_SERVED,
+    // Business opening hours confirmed by the owner; this does not specify alarm monitoring hours.
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: WEEK, opens: "00:00", closes: "23:59" },
     ],

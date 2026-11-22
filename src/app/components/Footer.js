@@ -13,12 +13,13 @@ export default function Footer() {
           <Logo variant="dark" size="md" />
           <p className="max-w-xs text-sm leading-relaxed text-muted-dark">
             Kamera sigurie, alarme, instalime elektrike, GPS, porta automatike, rrjete dhe zgjidhje për
-            hoteleri. Montim, monitorim dhe mirëmbajtje {SITE.serviceAreaText}.
+            hoteleri. Instalime dhe riparime {SITE.serviceAreaText}.
           </p>
+          <p className="text-xs leading-relaxed text-muted-dark">{SITE.legalName}</p>
         </div>
 
         <div className="lg:col-span-2">
-          <h4 className="eyebrow mb-5">Shërbimet</h4>
+          <h2 className="eyebrow mb-5">Shërbimet</h2>
           <ul className="grid gap-3 text-sm text-cream/80 sm:grid-cols-2">
             {SERVICES.map((service) => (
               <li key={service.slug}>
@@ -31,7 +32,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="eyebrow mb-5">Lidhje</h4>
+          <h2 className="eyebrow mb-5">Lidhje</h2>
           <ul className="space-y-3 text-sm text-cream/80">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
@@ -44,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="eyebrow mb-5">Kontakt</h4>
+          <h2 className="eyebrow mb-5">Kontakt</h2>
           <ul className="space-y-3 text-sm text-cream/80">
             <li>
               <a href={SITE.phoneHref} className="inline-flex items-center gap-3 transition-colors hover:text-gold">
@@ -58,6 +59,9 @@ export default function Footer() {
                 {SITE.email}
               </a>
             </li>
+            {SITE.whatsappHref && (
+              <li><a href={SITE.whatsappHref} className="inline-flex min-h-10 items-center gap-3 font-semibold text-gold hover:underline">Shkruani në WhatsApp</a></li>
+            )}
             <li>
               <a href={SITE.websiteHref} className="inline-flex items-center gap-3 transition-colors hover:text-gold">
                 <GlobeIcon className="h-4 w-4 text-gold" />

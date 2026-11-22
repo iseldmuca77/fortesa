@@ -1,31 +1,26 @@
 import SectionHeading from "./SectionHeading";
 import { RookMark } from "./Logo";
 import { CheckIcon } from "./Icons";
-import { SITE } from "../lib/site";
+import Link from "next/link";
+import { ROUTES } from "../lib/site";
 
 const FEATURES = [
   {
-    title: "Montim profesional",
-    text: "Ekip me përvojë që instalon dhe konfiguron çdo sistem sipas nevojave të objektit tuaj.",
+    title: "Nevoja e objektit",
+    text: "Përzgjedhja e pajisjeve fillon nga hapësira, përdorimi dhe puna që kërkohet.",
   },
   {
-    title: "Monitorim 24/7",
-    text: "Ndiqni shtëpinë ose biznesin në kohë reale nga telefoni ose kompjuteri juaj.",
+    title: "Kërkesë me përmbajtje të qartë",
+    text: "Tregoni pajisjet dhe kabllimin ekzistues, që të sqarohen montimi, konfigurimi dhe materialet.",
   },
   {
-    title: "Mirëmbajtje e vazhdueshme",
-    text: "Kontrolle periodike, përditësime dhe asistencë teknike sa herë që ju nevojitet.",
+    title: "Dorëzim dhe përdorim",
+    text: "Sqaroni çfarë do të provohet në përfundim dhe kush do ta përdorë ose administrojë sistemin.",
   },
   {
-    title: "Zgjidhje të personalizuara",
-    text: "Për familje, biznese dhe institucione publike e private, me pajisje cilësore.",
+    title: "Kushtet e mbështetjes",
+    text: "Garancia, mirëmbajtja dhe disponueshmëria duhen përcaktuar në ofertën për punën konkrete.",
   },
-];
-
-const STATS = [
-  { value: SITE.clients, label: "Klientë të kënaqur" },
-  { value: SITE.years, label: "Vjet përvojë" },
-  { value: "24/7", label: "Monitorim & asistencë" },
 ];
 
 export default function WhyFortesa() {
@@ -40,9 +35,9 @@ export default function WhyFortesa() {
           <SectionHeading
             tone="dark"
             align="left"
-            eyebrow="Pse Fortesa"
-            title="Një partner i besueshëm për sigurinë tuaj"
-            lead="Kombinojmë teknologjinë më të fundit me përvojën tonë për të ofruar zgjidhje të sigurta dhe afatgjata, për shtëpi dhe biznese."
+            eyebrow="Puna në objekt"
+            title="Zgjedhja fillon nga ajo që ju nevojitet"
+            lead="Një dyqan, një shtëpi dhe një ambient pune kanë kërkesa të ndryshme. Përshkrimi i tyre ndihmon në përcaktimin e punës."
           />
           <ul className="mt-10 space-y-5">
             {FEATURES.map((feature) => (
@@ -59,15 +54,15 @@ export default function WhyFortesa() {
           </ul>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="rounded-2xl border border-gold/20 bg-ink-2 p-7">
-              <p className="font-display text-5xl font-extrabold text-gold-gradient">{stat.value}</p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-dark">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <div className="rounded-2xl border border-gold/20 bg-ink-2 p-8 sm:p-10">
+          <p className="eyebrow">Për ofertën tuaj</p>
+          <h3 className="mt-5 font-display text-3xl font-extrabold">Na tregoni ku dhe çfarë duhet bërë</h3>
+          <ul className="mt-6 list-disc space-y-3 pl-5 text-sm leading-relaxed text-muted-dark marker:text-gold">
+            <li>Qyteti ose zona dhe lloji i objektit.</li>
+            <li>Montim i ri, zgjerim apo riparim i një sistemi ekzistues.</li>
+            <li>Pajisjet që keni dhe afati që po shqyrtoni.</li>
+          </ul>
+          <Link href={ROUTES.contact} className="btn btn-gold mt-8">Kërkoni një ofertë</Link>
         </div>
       </div>
     </section>

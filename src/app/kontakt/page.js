@@ -41,15 +41,22 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Kontakt"
-        title="Na Kontaktoni"
-        lead="Jemi këtu për t'ju ndihmuar. Plotësoni formularin ose përdorni detajet tona të kontaktit."
+        title="Flisni me Fortesa për punën tuaj"
+        lead="Kamera, alarme, instalime ose riparime elektrike: na tregoni çfarë ju nevojitet dhe ku ndodhet objekti."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid overflow-hidden rounded-2xl border border-cream-3 bg-white/80 shadow-xl lg:grid-cols-5">
           <div className="p-8 lg:col-span-3 lg:p-12">
-            <h2 className="font-display text-2xl font-extrabold">Dërgoni një mesazh</h2>
-            <p className="mt-2 text-sm text-muted">Do t&#39;ju përgjigjemi sa më shpejt të jetë e mundur.</p>
+            <h2 className="font-display text-2xl font-extrabold">Telefononi ose përgatitni një kërkesë</h2>
+            <p className="mt-2 text-sm text-muted">Na telefononi ose shkruani në WhatsApp për të diskutuar punën. Për një kërkesë me detaje, plotësoni formularin dhe zgjidhni WhatsApp ose email.</p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer" className="btn btn-deep">Shkruani në WhatsApp</a>
+              <a href={SITE.phoneHref} className="btn border border-cream-3 bg-white text-ink gap-2">
+                <PhoneIcon className="h-5 w-5" />
+                {SITE.phoneDisplay}
+              </a>
+            </div>
             <ContactForm />
           </div>
 
@@ -60,6 +67,9 @@ export default function ContactPage() {
                 <a href={SITE.phoneHref} className="text-lg transition-colors hover:text-gold">
                   {SITE.phoneDisplay}
                 </a>
+              </Detail>
+              <Detail icon={PhoneIcon} label="WhatsApp">
+                <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">Shkruani në WhatsApp</a>
               </Detail>
               <Detail icon={MailIcon} label="Email">
                 <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-gold">
@@ -94,20 +104,17 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <InfoCard icon={ClockIcon} title="Orari i Punës">
-            {SITE.hours.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
+          <InfoCard icon={ClockIcon} title="Orari i punës">
+            {SITE.hours.map((line) => <p key={line}>{line}</p>)}
+            <p>Na telefononi për të koordinuar vizitën.</p>
           </InfoCard>
-          <InfoCard icon={ShieldCheckIcon} title="Emergjenca 24/7">
-            <p>Për emergjenca dhe situata urgjente</p>
-            <p className="font-bold text-gold-dark">
-              <a href={SITE.phoneHref}>{SITE.phoneDisplay}</a>
-            </p>
+          <InfoCard icon={ShieldCheckIcon} title="Kërkesë me detaje">
+            <p>Përfshini shërbimin, llojin e objektit dhe punën që ju nevojitet.</p>
+            <p>Këto ndihmojnë për të sqaruar vlerësimin dhe ofertën.</p>
           </InfoCard>
-          <InfoCard icon={MailIcon} title="Përgjigje e Shpejtë">
-            <p>Përgjigje brenda 24 orëve</p>
-            <p>për të gjitha kërkesat</p>
+          <InfoCard icon={MapPinIcon} title="Vendndodhja e punës">
+            <p>Fortesa ka qendër në Tiranë.</p>
+            <p>Na tregoni zonën ose qytetin për të diskutuar shërbimin në objektin tuaj.</p>
           </InfoCard>
         </div>
       </section>
