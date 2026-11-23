@@ -1,13 +1,15 @@
 import pricePosts from "./blog/price-posts.json";
 import hotelPosts from "./blog/hotel-posts.json";
+import buyerPosts from "./blog/buyer-posts.json";
 import { ROUTES, SERVICES, SITE } from "./site";
 
 export const BLOG_CATEGORIES = [
-  { id: "prices", label: "Çmime & buxhet", description: "Çfarë paguani për pajisjet, çfarë përfshin montimi dhe si të krahasoni ofertat." },
-  { id: "hotels", label: "Hotele & mikpritje", description: "Planifikimi i sistemeve, përputhshmëria dhe vendimet që duhen marrë para hapjes." },
+  { id: "buyers", label: "Zgjedhja e instaluesit", eyebrow: "01 / Para zgjedhjes", description: "Pyetje dhe kritere praktike për të krahasuar instaluesit, përvojën dhe përmbajtjen e ofertave." },
+  { id: "prices", label: "Çmime & buxhet", eyebrow: "02 / Para ofertës", description: "Çfarë paguani për pajisjet, çfarë përfshin montimi dhe si të krahasoni ofertat." },
+  { id: "hotels", label: "Hotele & mikpritje", eyebrow: "03 / Para hapjes", description: "Planifikimi i sistemeve, përputhshmëria dhe vendimet që duhen marrë para hapjes." },
 ];
 
-const posts = [...pricePosts, ...hotelPosts];
+const posts = [...buyerPosts, ...pricePosts, ...hotelPosts];
 export const blogHref = (slug) => `/blog/${slug}`;
 export const postQuoteHref = (post) => `${ROUTES.contact}?sherbimi=${encodeURIComponent(post.serviceSlug)}`;
 

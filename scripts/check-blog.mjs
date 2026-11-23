@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 // so a page that only renders its article after hydration cannot pass.
 const base = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 const origin = "https://www.fortesa.al";
-const collections = await Promise.all(["price-posts", "hotel-posts"].map(async (name) =>
+const collections = await Promise.all(["buyer-posts", "price-posts", "hotel-posts"].map(async (name) =>
   JSON.parse(await readFile(new URL(`../src/app/lib/blog/${name}.json`, import.meta.url), "utf8"))
 ));
 const allPosts = collections.flat();

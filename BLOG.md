@@ -6,13 +6,14 @@ The Albanian blog is part of the existing Next.js site. It uses local JSON conte
 
 - `src/app/lib/blog/price-posts.json`: equipment, installation and budget guides.
 - `src/app/lib/blog/hotel-posts.json`: hotel planning guides.
+- `src/app/lib/blog/buyer-posts.json`: installer selection and quotation-comparison guides.
 - `src/app/lib/blog.js`: published-content selectors, dates, links and schema.
 - `src/app/blog/page.js`: category index.
 - `src/app/blog/[slug]/page.js`: static article pages.
 
 ## Prepare an article
 
-Copy an existing content object with a new, stable ASCII `slug`. Keep `status` as `draft` while writing. Required fields are `title`, `category` (`prices` or `hotels`), `serviceSlug` (an existing service), `summary`, `seoTitle`, `seoDescription`, `primaryQuestion`, `intro`, `sections`, `faq`, `sources`, `sourcesCheckedAt`, `relatedSlugs`, `publishedAt`, `updatedAt`, `status`, and `author`.
+Copy an existing content object with a new, stable ASCII `slug`. Keep `status` as `draft` while writing. Required fields are `title`, `category` (`buyers`, `prices` or `hotels`), `serviceSlug` (an existing service), `summary`, `seoTitle`, `seoDescription`, `primaryQuestion`, `intro`, `sections`, `faq`, `sources`, `sourcesCheckedAt`, `relatedSlugs`, `publishedAt`, `updatedAt`, `status`, and `author`.
 
 Each section has a unique ASCII `id` and `title`, with optional `paragraphs`, `bullets`, `table` (`headers` and `rows`) and `note`. Content is plain text; React escapes it. Do not put HTML or Markdown links inside strings. Put source links in `sources` with a meaningful `label`, full HTTPS `url` and relevant `note`.
 
