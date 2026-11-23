@@ -31,7 +31,7 @@ export default function BlogPage() {
         <nav aria-label="Shërbimet kryesore" className="mb-12 rounded-2xl border border-cream-3 bg-white/70 p-6"><p className="text-sm font-bold">Po kërkoni montim ose riparim?</p><div className="mt-4 flex flex-wrap gap-x-7 gap-y-3">{priorityServices.map((service) => <Link key={service.slug} href={serviceHref(service.slug)} className="text-sm font-semibold text-gold-deep underline decoration-gold-dark/40 underline-offset-4 hover:decoration-gold-dark">{service.title}</Link>)}</div></nav>
         {BLOG_CATEGORIES.map((category) => (
           <section key={category.id} id={category.id} className="mb-16 scroll-mt-28 last:mb-0" aria-labelledby={`${category.id}-title`}>
-            <div className="mb-8 max-w-3xl"><p className="eyebrow eyebrow-deep">{category.id === "prices" ? "01 / Para ofertës" : "02 / Para hapjes"}</p><h2 id={`${category.id}-title`} className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">{category.label}</h2><p className="mt-3 leading-relaxed text-muted">{category.description}</p></div>
+            <div className="mb-8 max-w-3xl"><p className="eyebrow eyebrow-deep">{category.eyebrow}</p><h2 id={`${category.id}-title`} className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">{category.label}</h2><p className="mt-3 leading-relaxed text-muted">{category.description}</p></div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{posts.filter((post) => post.category === category.id).map((post) => <BlogCard key={post.slug} post={post} />)}</div>
           </section>
         ))}

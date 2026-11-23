@@ -17,7 +17,7 @@ const CRUMBS = [
 export const metadata = pageMetadata({
   title: "Rreth Nesh",
   description:
-    "Njihuni me Fortesa Security.al SHPK në Tiranë, me pronar Igli Muca. Kamera sigurie, sisteme alarmi, instalime dhe riparime elektrike në Shqipëri.",
+    "Fortesa nisi aktivitetin në 2023. Pronari Igli Muca ka 9 vite përvojë profesionale. Njihuni me kompaninë dhe shërbimet e saj në Shqipëri.",
   path: ROUTES.about,
 });
 
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 Fortesa, Siguri dhe Teknologji
               </h2>
               <p className="mt-5 leading-relaxed text-muted">
-                Fortesa Security.al SHPK ofron montim kamerash sigurie dhe sistemesh alarmi,
+                Fortesa Security.al SHPK nisi aktivitetin në vitin 2023. Ofrojmë montim kamerash sigurie dhe sistemesh alarmi,
                 instalime dhe riparime elektrike. Qendra jonë ndodhet në {SITE.street}, {SITE.city}.
                 Punojmë me kërkesa për objekte në Shqipëri; vendndodhja dhe puna konkrete sqarohen
                 gjatë kërkesës për ofertë.
@@ -74,7 +74,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-2xl font-bold">Kush drejton Fortesa</h3>
               <p className="mt-3 leading-relaxed text-muted">
-                Pronari i Fortesa është Igli Muca. Për një instalim të ri, një sistem ekzistues ose
+                Pronari i Fortesa është Igli Muca, me 9 vite përvojë profesionale. Për një instalim të ri, një sistem ekzistues ose
                 një riparim, mund të na kontaktoni drejtpërdrejt në {SITE.phoneDisplay} ose me email
                 në {SITE.email}.
               </p>
