@@ -36,6 +36,9 @@ export const metadata = {
   creator: SITE.name,
   publisher: SITE.name,
   category: "business",
+  icons: {
+    icon: [{ url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" }],
+  },
   openGraph: { ...OG_BASE, title: DEFAULT_TITLE, description: DEFAULT_DESCRIPTION, url: "/" },
   twitter: { card: "summary_large_image", title: DEFAULT_TITLE, description: DEFAULT_DESCRIPTION },
   robots: {
