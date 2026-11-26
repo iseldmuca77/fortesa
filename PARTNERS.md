@@ -4,6 +4,8 @@ Iseld confirmed these nine equipment brands on 26 November 2026. The homepage se
 
 Use original brand artwork on white. These are equipment brand listings, not a claim of certification, exclusivity or authorized-distributor status. Logo files are served locally and contain no active SVG scripts or external references.
 
+Brand names are visible, server-rendered text with links to the official manufacturer sites. Category links connect to Fortesa's camera, alarm, audio and electrical service pages. The homepage WebPage schema mentions the same nine Brand entities; it does not assign those manufacturers to Fortesa's identity or claim ownership, authorization or superiority. These changes clarify content for readers and crawlers, with no guaranteed search or AI recommendation result. See [Google's AI search guidance](https://developers.google.com/search/docs/appearance/ai-features) and [schema.org mentions](https://schema.org/mentions).
+
 ## Original artwork sources
 
 | Brand | File | Official source page | Original asset |
