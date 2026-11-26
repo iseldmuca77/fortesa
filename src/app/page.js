@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "./components/Logo";
 import Services from "./components/Services";
 import Partners from "./components/Partners";
+import ClientProjects from "./components/ClientProjects";
 import WhyFortesa from "./components/WhyFortesa";
 import RequestSteps from "./components/RequestSteps";
 import ProjectUploadCallout from "./components/ProjectUploadCallout";
@@ -63,6 +64,9 @@ export default function Home() {
                 {SITE.phoneDisplay}
               </a>
             </div>
+            <a href="#klientet" className="mt-7 inline-flex min-h-11 items-center gap-2 rounded text-sm font-semibold text-gold underline decoration-gold/40 underline-offset-4 hover:text-gold-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold">
+              Shihni projektet tona <ArrowRightIcon className="h-4 w-4" />
+            </a>
           </div>
 
           {/* Business-card style panel: the three core services, plus a link to the rest */}
@@ -117,6 +121,7 @@ export default function Home() {
 
       <Partners />
       <Services compact />
+      <ClientProjects />
       <WhyFortesa />
       <RequestSteps />
       <ProjectUploadCallout />

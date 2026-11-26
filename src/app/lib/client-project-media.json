@@ -1,0 +1,182 @@
+{
+  "supermarket-family": [
+    {
+      "type": "image",
+      "src": "/images/projects/supermarket-family/01.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kamerë sigurie mbi raftet e Supermarket Family."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/supermarket-family/02.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Detaj i montimit të kamerës në tavan te Supermarket Family."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/supermarket-family/03.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kamerë e montuar në murin e jashtëm te Supermarket Family."
+    }
+  ],
+  "hotel-marion": [
+    {
+      "type": "image",
+      "src": "/images/projects/hotel-marion/01.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kabineti i rrjetit me pajisjet dhe lidhjet në Hotel Marion."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/hotel-marion/02.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kabineti i rrjetit gjatë punimeve në Hotel Marion."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/hotel-marion/03.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Lidhja e kabllove gjatë instalimit të rrjetit në Hotel Marion."
+    },
+    {
+      "type": "video",
+      "src": "/videos/projects/hotel-marion.mp4",
+      "width": 540,
+      "height": 960,
+      "alt": "Pamje e kabinetit të rrjetit dhe kabllimit në Hotel Marion.",
+      "poster": "/images/projects/hotel-marion/video-poster.webp"
+    }
+  ],
+  "starlink-jaht": [
+    {
+      "type": "image",
+      "src": "/images/projects/starlink-jaht/01.webp",
+      "width": 1400,
+      "height": 1011,
+      "alt": "Antena Starlink e vendosur mbi jaht."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/starlink-jaht/02.webp",
+      "width": 1400,
+      "height": 554,
+      "alt": "Pajisja e Starlink brenda kabinës së jahtit."
+    },
+    {
+      "type": "video",
+      "src": "/videos/projects/starlink-jaht.mp4",
+      "width": 540,
+      "height": 960,
+      "alt": "Pamje e antenës Starlink mbi jaht.",
+      "poster": "/images/projects/starlink-jaht/video-poster.webp"
+    }
+  ],
+  "tripod-hipoteka-tirane": [
+    {
+      "type": "image",
+      "src": "/images/projects/tripod-hipoteka-tirane/01.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Turniketi tripod dhe lexuesi i aksesit në Hipotekë, Tiranë."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/tripod-hipoteka-tirane/02.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Pamje anësore e turniketit për hyrje-daljen e punonjësve."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/tripod-hipoteka-tirane/03.webp",
+      "width": 1235,
+      "height": 1400,
+      "alt": "Montimi i turniketit tripod në ambientin e hyrjes."
+    }
+  ],
+  "akses-citofon-argjendari": [
+    {
+      "type": "image",
+      "src": "/images/projects/akses-citofon-argjendari/01.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Paneli i citofonit dhe kontrollit të aksesit në argjendari."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/akses-citofon-argjendari/02.webp",
+      "width": 886,
+      "height": 1400,
+      "alt": "Paneli i aksesit i montuar pranë derës së argjendarisë."
+    },
+    {
+      "type": "video",
+      "src": "/videos/projects/akses-citofon-argjendari.mp4",
+      "width": 504,
+      "height": 960,
+      "alt": "Demonstrim i lexuesit të aksesit me çelës elektronik në argjendari.",
+      "poster": "/images/projects/akses-citofon-argjendari/video-poster.webp"
+    }
+  ],
+  "kamera-anpr-butrinti": [
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-anpr-butrinti/01.webp",
+      "width": 788,
+      "height": 1400,
+      "alt": "Kamerë ANPR e montuar në shtyllë te Butrinti."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-anpr-butrinti/02.webp",
+      "width": 788,
+      "height": 1400,
+      "alt": "Kamerë e montuar pranë ndriçuesit te Butrinti."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-anpr-butrinti/03.webp",
+      "width": 788,
+      "height": 1400,
+      "alt": "Pamje nga instalimi i kamerës në shtyllë te Butrinti."
+    },
+    {
+      "type": "video",
+      "src": "/videos/projects/kamera-anpr-butrinti.mp4",
+      "width": 540,
+      "height": 960,
+      "alt": "Pamje e kamerës së montuar në ambientin e jashtëm te Butrinti.",
+      "poster": "/images/projects/kamera-anpr-butrinti/video-poster.webp"
+    }
+  ],
+  "kamera-autobusi": [
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-autobusi/01.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kamera në pjesën e brendshme të autobusit të Linjës së Komunës.",
+      "position": "center 30%"
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-autobusi/02.webp",
+      "width": 1050,
+      "height": 1400,
+      "alt": "Kamerë mbi derën e autobusit të Linjës së Komunës."
+    },
+    {
+      "type": "image",
+      "src": "/images/projects/kamera-autobusi/03.webp",
+      "width": 1400,
+      "height": 1124,
+      "alt": "Detaj i kamerës dhe kalimit të kabllit brenda autobusit."
+    }
+  ]
+}
