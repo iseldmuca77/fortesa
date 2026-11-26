@@ -41,6 +41,13 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              {/* Native navigation repositions the section even when its hash is already active. */}
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a href="/#partneret" className="transition-colors hover:text-gold">
+                Partnerët tanë
+              </a>
+            </li>
           </ul>
         </div>
 

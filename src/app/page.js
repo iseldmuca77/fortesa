@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./components/Logo";
 import Services from "./components/Services";
+import Partners from "./components/Partners";
 import WhyFortesa from "./components/WhyFortesa";
 import RequestSteps from "./components/RequestSteps";
 import ProjectUploadCallout from "./components/ProjectUploadCallout";
@@ -114,6 +115,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Partners />
       <Services compact />
       <WhyFortesa />
       <RequestSteps />
