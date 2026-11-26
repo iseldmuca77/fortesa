@@ -48,6 +48,10 @@ export default function Footer() {
                 Partnerët tanë
               </a>
             </li>
+            <li>
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a href="/#klientet" className="transition-colors hover:text-gold">Klientët dhe projektet tona</a>
+            </li>
           </ul>
         </div>
 
